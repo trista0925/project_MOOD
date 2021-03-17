@@ -1,0 +1,60 @@
+<a class="showMenu" href="javascript:;">
+    <div class="hamburger" id="hamburger-1">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+</a>
+<a href="index.html">
+    <div class="logo"> <img src="images/logo/MOOD_logo.svg" alt=""></a>
+</div>
+
+<nav>
+    <a href="living.html" class="btn1">NEW COLLECTION</a>
+    <a href="living.html">LIVING</a>
+    <a href="living.html">ACCESSORIES</a>
+    <a href="living.html">ALL ITEMS</a>
+    <a href="living.html">CONTACT</a>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<hr>
+
+
+<script>
+    $(function() {
+        var targetTop; //負責隨時偵測取得上方的距離
+
+        //(showmenu)手機導覽列功能=========================
+        $('nav a').click(function() {
+            targetTop = ($(this).attr('href')).position().top; //console.log(targetTop);
+            //控制整頁滑動
+            $('html,body').animate({
+                scrollTop: targetTop
+            }, 500);
+            if ($('.showMenu').is(':hidden')) {
+                $('header nav').show(); //桌機版時一定出現
+            } else {
+                $('header nav').hide(); //手機版時一定隱藏
+            }
+        });
+
+        $('.showMenu').click(function() {
+            $('header>nav').fadeToggle(500)
+        })
+
+        //(showmenu)當視窗調整大小時
+        $(window).resize(function() {
+            if ($('.showMenu').is(':hidden')) {
+                $('header nav').show();
+            } else {
+                $('header nav').hide();
+            }
+        })
+    });
+
+    $(".hamburger").click(function() {
+        $(this).toggleClass("is-active");
+    });
+</script>
