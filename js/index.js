@@ -2,6 +2,7 @@
 $(document).ready(function() {
     $('header').load('header.html');
     $('footer').load('footer.html');
+    $('.btmBox').load('btmbox.html');
 });
 
 //(slider)首頁輪播圖=========================
@@ -41,30 +42,5 @@ $(document).ready(function() {
                 }
             }
         ]
-    });
-});
-
-$(function() {
-
-    //(fixednav)導覽列下滑固定=========================
-    var scrollTime; //負責視窗捲動時偵測等待的時間
-
-    //(fixednav)判斷往上捲出的高度是否已超過header的高度, 如果header已捲出畫面則加上fixed的class名稱
-    function checkHeader() {
-        if ($(document).scrollTop() >= $('header').height()) {
-            $('header').addClass('fixed');
-        }
-        if ($(document).scrollTop() == 0) {
-            $('header').removeClass('fixed');
-        }
-    }
-    checkHeader();
-
-    //(fixednav)當視窗捲動時
-    $(window).scroll(function() {
-        clearTimeout(scrollTime);
-        scrollTime = setTimeout(function() {
-            checkHeader();
-        }, 100);
     });
 });

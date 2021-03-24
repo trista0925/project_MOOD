@@ -10,20 +10,40 @@
 </div>
 
 <nav>
-    <a href="living.html" class="btn1">NEW COLLECTION</a>
-    <a href="living.html">LIVING</a>
-    <a href="living.html">ACCESSORIES</a>
-    <a href="living.html">ALL ITEMS</a>
-    <a href="living.html">CONTACT</a>
+    <a href="living.html">
+        <span class="transEn">NEW</span><span class="transTw">新品</span></a>
+    <a href="living.html"><span class="transEn">ACCESSORIES</span><span class="transTw">配件飾品</span></a>
+    <a href="living.html"><span class="transEn">LIVING</span><span class="transTw">居家生活</span></a>
+    <a href="living.html"><span class="transEn">ALL ITEMS</span><span class="transTw">全部商品</span></a>
+    <a href="living.html"><span class="transEn">CONTACT</span><span class="transTw">聯絡我們</span></a>
     <a href="#"></a>
     <a href="#"></a>
-    <a href="#"></a>
+    <a href="cart.html"></a>
 </nav>
-<hr>
-
-
+<hr style="width: 85%;">
 <script>
     $(function() {
+        //(fixednav)導覽列下滑固定=========================
+        var scrollTime; //負責視窗捲動時偵測等待的時間
+
+        //(fixednav)判斷往上捲出的高度是否已超過header的高度, 如果header已捲出畫面則加上fixed的class名稱
+        function checkHeader() {
+            if ($(document).scrollTop() >= $('header').height()) {
+                $('header').addClass('fixed');
+            }
+            if ($(document).scrollTop() == 0) {
+                $('header').removeClass('fixed');
+            }
+        }
+        checkHeader();
+
+        //(fixednav)當視窗捲動時
+        $(window).scroll(function() {
+            clearTimeout(scrollTime);
+            scrollTime = setTimeout(function() {
+                checkHeader();
+            }, 100);
+        });
         var targetTop; //負責隨時偵測取得上方的距離
 
         //(showmenu)手機導覽列功能=========================
