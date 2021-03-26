@@ -1610,7 +1610,7 @@
             justify-content: center
         }
         .btmBox .item {
-            margin: 15px 35px;
+            margin: 15px 28px;
         }
         .btmBox .item:nth-child(1),
         .btmBox .item:nth-child(2),
@@ -2042,6 +2042,66 @@
             margin-top: 75px;
             margin-bottom: 20px;
         }
+        .tableCart {
+            border-spacing: 0;
+            width: 100%;
+        }
+        .tableCart th {
+            background-color: #D8CDC3;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #767676;
+            padding: 10px 4px;
+            font-weight: normal;
+        }
+        .tableCart td {
+            text-align: center;
+        }
+        .tableCart .info {
+            display: flex;
+            align-items: center;
+        }
+        .tableCart .info a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #333333;
+        }
+        .tableCart .info a:hover {
+            text-decoration: underline;
+        }
+        .tableCart .infoImg {
+            width: 150px;
+            height: 150px;
+            margin: 10px 0px;
+            background-position: center center;
+            background-size: cover;
+        }
+        .tableCart .infoName {
+            width: 250px;
+            height: 100%;
+            text-align: left;
+            padding-left: 10px;
+            line-height: 22px;
+        }
+        .selection select {
+            height: 30px;
+            padding: 0px 6px;
+            border: 1px solid #767676;
+            background-color: #E8E0D4;
+            color: #767676;
+        }
+        .tableCart .infoDel::before {
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url(../images/icon/icon.svg);
+            background-size: auto 100%;
+            background-position: -100px 0;
+            align-self: center;
+            transform: scale(0.8);
+            cursor: pointer;
+        }
     }
     /* 手機 */
     
@@ -2050,76 +2110,30 @@
             margin-top: 5px;
             margin-bottom: 20px;
         }
-    }
-    
-    .tableCart {
-        border-spacing: 0;
-        width: 100%;
-    }
-    
-    .tableCart th {
-        background-color: #D8CDC3;
-        text-align: center;
-        font-size: 0.9rem;
-        color: #a1978d;
-        padding: 10px 4px;
-        font-weight: normal;
-    }
-    
-    .tableCart td {
-        text-align: center;
-    }
-    
-    .tableCart .info {
-        display: flex;
-        align-items: center;
-    }
-    
-    .tableCart .info a {
-        text-decoration: none;
-        cursor: pointer;
-        color: #333333;
-    }
-    
-    .tableCart .info a:hover {
-        text-decoration: underline;
-    }
-    
-    .tableCart .infoImg {
-        width: 150px;
-        height: 150px;
-        margin: 10px 0px;
-        background-position: center center;
-        background-size: cover;
-    }
-    
-    .tableCart .infoName {
-        width: 250px;
-        height: 100%;
-        text-align: left;
-        padding-left: 10px;
-        line-height: 22px;
-    }
-    
-    .selection select {
-        height: 30px;
-        padding: 0px 6px;
-        border: 1px solid #767676;
-        background-color: #E8E0D4;
-        color: #767676;
-    }
-    
-    .tableCart .infoDel::before {
-        content: "";
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        background-image: url(../images/icon/icon.svg);
-        background-size: auto 100%;
-        background-position: -100px 0;
-        align-self: center;
-        transform: scale(0.8);
-        cursor: pointer;
+        .tableCart thead tr:first-child {
+            display: none;
+        }
+        .tableCart tbody td {
+            display: inline-block;
+        }
+        .tableCart tbody td:first-child {
+            width: 100%;
+        }
+        .tableCart .info {
+            display: flex;
+            align-items: center;
+        }
+        .tableCart .infoImg {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            background-position: center center;
+            background-size: cover;
+        }
+        .tableCart .infoName {
+            padding-left: 10px;
+            line-height: 22px;
+        }
     }
     
     .cartBill {
@@ -2131,7 +2145,7 @@
     .cartSummary {
         background-color: #D8CDC3;
         text-align: center;
-        color: #a1978d;
+        color: #767676;
         padding: 10px 4px;
         font-weight: normal;
         font-size: 0.9rem;
