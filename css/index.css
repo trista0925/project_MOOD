@@ -1533,7 +1533,7 @@
     
     @media(max-width: 1024px) {
         header .logo {
-            width: 70px;
+            width: 60px;
             position: relative;
             top: 0;
             left: 0;
@@ -1826,8 +1826,8 @@
     
     @media(min-width: 1025px) {
         .living {
-            margin-top: 65px;
-            margin-bottom: 20px;
+            margin-top: 80px;
+            margin-bottom: 30px;
         }
     }
     /* 手機 */
@@ -1835,7 +1835,7 @@
     @media(max-width: 1024px) {
         .living {
             margin-top: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
     }
     
@@ -2039,14 +2039,13 @@
     
     @media(min-width: 1025px) {
         .cart {
-            margin-top: 75px;
-            margin-bottom: 20px;
+            margin: 200px 0px 50px 0px;
         }
         .tableCart {
             border-spacing: 0;
             width: 100%;
         }
-        .tableCart th {
+        .tableCart thead th {
             background-color: #D8CDC3;
             text-align: center;
             font-size: 0.9rem;
@@ -2054,43 +2053,48 @@
             padding: 10px 4px;
             font-weight: normal;
         }
-        .tableCart td {
+        .tableCart tbody td:first-child {
+            text-align: left;
+        }
+        .tableCart tbody td {
             text-align: center;
         }
-        .tableCart .info {
+        .tableCart tbody span {
+            display: none;
+        }
+        .tableCart tbody .info {
             display: flex;
             align-items: center;
         }
-        .tableCart .info a {
+        .tableCart tbody .info a {
             text-decoration: none;
             cursor: pointer;
             color: #333333;
         }
-        .tableCart .info a:hover {
+        .tableCart tbody .info a:hover {
             text-decoration: underline;
         }
-        .tableCart .infoImg {
+        .tableCart tbody .infoImg {
             width: 150px;
             height: 150px;
             margin: 10px 0px;
             background-position: center center;
             background-size: cover;
         }
-        .tableCart .infoName {
+        .tableCart tbody .infoName {
             width: 250px;
             height: 100%;
-            text-align: left;
             padding-left: 10px;
             line-height: 22px;
         }
-        .selection select {
+        .tableCart tbody select {
             height: 30px;
             padding: 0px 6px;
             border: 1px solid #767676;
             background-color: #E8E0D4;
             color: #767676;
         }
-        .tableCart .infoDel::before {
+        .tableCart tbody .infoDel::before {
             content: "";
             display: inline-block;
             width: 25px;
@@ -2107,11 +2111,15 @@
     
     @media(max-width: 1024px) {
         .cart {
-            margin-top: 5px;
-            margin-bottom: 20px;
+            margin: 100px 0px 60px 0px;
         }
         .tableCart thead tr:first-child {
             display: none;
+        }
+        .tableCart tbody tr {
+            display: block;
+            border-bottom: 1px #a1978d solid;
+            padding: 15px 0px 5px 0px;
         }
         .tableCart tbody td {
             display: inline-block;
@@ -2119,20 +2127,54 @@
         .tableCart tbody td:first-child {
             width: 100%;
         }
-        .tableCart .info {
+        .tableCart tbody td:nth-last-child(-n+4) {
+            /* -n+4表示選取倒數4個元素 */
+            width: 23.5%;
+            line-height: 25px;
+            text-align: center;
+            vertical-align: top;
+            padding: 10px 0px 10px 0px;
+        }
+        .tableCart tbody td span {
+            font-size: 0.8rem;
+        }
+        .tableCart tbody .info {
             display: flex;
             align-items: center;
         }
-        .tableCart .infoImg {
-            width: 80px;
-            height: 80px;
+        .tableCart tbody .info a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #333333;
+        }
+        .tableCart tbody .infoImg {
+            width: 90px;
+            height: 90px;
             margin: 10px;
             background-position: center center;
             background-size: cover;
         }
-        .tableCart .infoName {
+        .tableCart tbody .infoName {
             padding-left: 10px;
             line-height: 22px;
+        }
+        .tableCart tbody select {
+            padding: 0px 4px;
+            border: none;
+            background-color: #f7f2f0;
+            color: #767676;
+        }
+        .tableCart tbody .infoDel::before {
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url(../images/icon/icon.svg);
+            background-size: auto 100%;
+            background-position: -100px 0;
+            align-self: center;
+            transform: scale(0.7);
+            cursor: pointer;
         }
     }
     
