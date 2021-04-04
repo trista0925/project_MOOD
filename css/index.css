@@ -1598,6 +1598,14 @@
         }
     }
     /* 底部項目 ===================================== */
+    /* 桌機 */
+    
+    @media(min-width: 1025px) {
+        .btmBox {
+            display: none;
+        }
+    }
+    /* 手機 */
     
     @media(max-width: 1024px) {
         .btmBox {
@@ -1624,16 +1632,16 @@
             align-self: center;
             transform: scale(1.2)
         }
-        .btmBox .item:nth-child(1) {
+        .btmBox .search {
             background-position: 0 0;
         }
-        .btmBox .item:nth-child(2) {
+        .btmBox .member {
             background-position: -25px 0;
         }
-        .btmBox .item:nth-child(3) {
+        .btmBox .cart {
             background-position: -50px 0;
         }
-        .btmBox .item:nth-child(4) {
+        .btmBox .gotop {
             background-position: -75px 0;
         }
     }
