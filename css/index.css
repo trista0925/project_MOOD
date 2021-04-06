@@ -2008,7 +2008,12 @@
     }
     /* 加入購物車 */
     
-    input {
+    input:focus,
+    select:focus {
+        outline: none;
+    }
+    
+    .quantity {
         font-family: "Belleza", sans-serif;
         width: 35px;
         height: 35px;
@@ -2019,30 +2024,89 @@
         font-size: 1rem;
     }
     
-    input[type=number]::-webkit-inner-spin-button {
+    .quantity::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
     
-    textarea:focus,
-    input:focus {
-        outline: none;
-    }
-    
-    input[type=button] {
+    .addToCart {
         width: 35%;
+        height: 35px;
         margin: 10px;
-        color: #E8E0D4;
-        background-color: #767676;
+        color: #f7f2f0;
+        background-color: #a1978d;
         border: none;
         text-decoration: none;
         cursor: pointer;
         transition: all 300ms;
     }
     
-    input[type=button]:hover {
+    .addToCart:hover {
         opacity: 0.6;
     }
     /* cart ===================================== */
+    /* 進度條 */
+    /* 桌機 */
+    
+    @media(min-width: 1025px) {
+        .progressbar {
+            text-align: center;
+            margin: 10px 0px 50px 0px;
+        }
+    }
+    /* 手機 */
+    
+    @media(max-width: 1024px) {
+        .progressbar {
+            text-align: center;
+            margin: 30px 0px 0px 0px;
+        }
+    }
+    /* 文字 */
+    
+    .progressbar li {
+        color: #767676;
+        font-size: 0.85rem;
+        width: 33%;
+        float: left;
+        position: relative;
+        line-height: 30px;
+    }
+    /* 其他階段 */
+    
+    .progressbar li:before {
+        content: 'o';
+        counter-increment: step;
+        width: 15px;
+        line-height: 15px;
+        display: block;
+        color: #D8CDC3;
+        background: #D8CDC3;
+        border-radius: 100%;
+        margin: auto;
+    }
+    /* 線段 */
+    
+    .progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #D8CDC3;
+        position: absolute;
+        left: -50%;
+        top: 7px;
+        z-index: -1;
+    }
+    
+    .progressbar li:first-child:after {
+        content: none;
+    }
+    /* 當下階段 */
+    
+    .progressbar li.active:before,
+    #progressbar li.active:after {
+        background: #a1978d;
+        color: #a1978d;
+    }
     /* 桌機 */
     
     @media(min-width: 1025px) {
@@ -2193,9 +2257,9 @@
     }
     
     .cartSummary {
+        color: #767676;
         background-color: #D8CDC3;
         text-align: center;
-        color: #767676;
         padding: 10px 4px;
         font-weight: normal;
         font-size: 0.9rem;
@@ -2232,5 +2296,149 @@
     }
     
     .cartBtn:hover {
+        opacity: 0.6;
+    }
+    /* checkout ===================================== */
+    /* 手機 */
+    
+    @media(max-width: 1024px) {
+        .checkSummary:nth-child(1) {
+            margin-top: 20px;
+        }
+        .checkBill .mgTop {
+            margin: 10px 5px 0px 5px;
+        }
+    }
+    
+    .checkSummary {
+        color: #767676;
+        background-color: #D8CDC3;
+        text-align: center;
+        padding: 10px 4px;
+        font-weight: normal;
+        font-size: 0.9rem;
+    }
+    
+    .checkBill {
+        border: #D8CDC3 1px solid;
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .checkBill li {
+        margin: 10px;
+        padding-left: 5rem;
+    }
+    
+    .checkBill .title {
+        font-size: 0.9rem;
+        margin-left: -5rem;
+        float: left;
+        line-height: 30px;
+    }
+    
+    .checkBill select {
+        height: 30px;
+        padding: 0px 6px;
+        margin: 0px 5px;
+        color: #767676;
+        background-color: rgb(255, 255, 255, 0.3);
+        border: 1px #C9BAAB solid;
+    }
+    
+    .checkout {
+        display: flex;
+        align-items: center;
+    }
+    
+    .checkInfo {
+        margin-left: 20px;
+    }
+    
+    .checkInfo p {
+        font-size: 0.9rem;
+    }
+    
+    .checkImg {
+        width: 100px;
+        height: 100px;
+        margin: 5px 0px 5px 0px;
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    .checkList,
+    .checkPrice,
+    .checkTotal {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .checkList {
+        padding-top: 10px;
+    }
+    
+    .checkPrice {
+        padding-bottom: 10px;
+    }
+    
+    .checkTotal {
+        padding: 10px 0px 10px 0px;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    
+    .checkBuyer {
+        color: #767676;
+        background-color: #D8CDC3;
+        text-align: center;
+        padding: 10px 4px;
+        font-weight: normal;
+        font-size: 0.9rem;
+    }
+    
+    .checkText {
+        font-family: "Belleza", sans-serif;
+        width: 230px;
+        height: 30px;
+        vertical-align: middle;
+        padding: 10px;
+        margin: 0px 5px;
+        background-color: rgb(255, 255, 255, 0.3);
+        border: 1px #C9BAAB solid;
+        font-size: 0.85rem;
+    }
+    
+    .checkPrev {
+        float: left;
+        width: 50%;
+        color: #767676;
+        background-color: #D8CDC3;
+        text-align: center;
+        padding: 10px 0px;
+        font-weight: normal;
+        font-size: 0.9rem;
+        transition: all 300ms;
+        cursor: pointer;
+    }
+    
+    .checkPrev:hover {
+        opacity: 0.6;
+    }
+    
+    .checkNext {
+        float: right;
+        width: 50%;
+        color: #f7f2f0;
+        background-color: #a1978d;
+        text-align: center;
+        padding: 10px 0px;
+        font-weight: normal;
+        font-size: 0.9rem;
+        transition: all 300ms;
+        cursor: pointer;
+    }
+    
+    .checkNext:hover {
         opacity: 0.6;
     }
