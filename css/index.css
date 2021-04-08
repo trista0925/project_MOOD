@@ -1,2444 +1,2703 @@
-    /* all page ===================================== */
-    
-    @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Noto+Sans+TC&display=swap');
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+/* all page ===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Noto+Sans+TC&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* footer若需貼底部須新增以上3行 */
+    font-family: 'Belleza', 'Noto Sans TC', sans-serif;
+    letter-spacing: 0.05rem;
+    color: #333333;
+    background-color: #E8E0D4;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    /* 輪播標題 */
+    h1 {
+        font-size: 4.5rem;
     }
-    
-    body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        /* footer若需貼底部須新增以上3行 */
-        font-family: 'Belleza', 'Noto Sans TC', sans-serif;
-        letter-spacing: 0.05rem;
-        color: #333333;
-        background-color: #E8E0D4;
-        overflow-x: hidden;
+    /* 首頁標題、首頁內容標題、商品內容標題 */
+    h2 {
+        font-size: 2rem;
     }
-    
-    a {
-        text-decoration: none;
+    /* 輪播副標、商品列表標題、訂單完成 */
+    h3 {
+        font-size: 1.75rem;
     }
-    
-    ul,
-    ol,
-    li {
-        list-style: none;
+    /* 商品內容價錢 */
+    h4 {
+        font-size: 1.5rem;
     }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h4,
-    h5,
+    /* 首頁小輪播內文、商品列表價錢 */
+    h5 {
+        font-size: 1.25rem;
+    }
+    /* footer標題 */
     h6 {
-        font-weight: normal;
+        font-size: 1.1rem;
     }
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        /* 輪播標題 */
-        h1 {
-            font-size: 4.5rem;
-        }
-        /* 首頁標題、首頁內容標題、商品內容標題 */
-        h2 {
-            font-size: 2rem;
-        }
-        /* 輪播副標、商品列表標題 */
-        h3 {
-            font-size: 1.75rem;
-        }
-        /* 商品內容價錢 */
-        h4 {
-            font-size: 1.5rem;
-        }
-        /* 首頁小輪播內文、商品列表價錢 */
-        h5 {
-            font-size: 1.25rem;
-        }
-        /* footer標題 */
-        h6 {
-            font-size: 1.1rem;
-        }
-        p {
-            font-size: 1rem;
-        }
+    p {
+        font-size: 1rem;
     }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        /* 輪播標題 */
-        h1 {
-            font-size: 2.5rem;
-        }
-        /* 首頁標題、首頁內容標題、商品內容標題 */
-        h2 {
-            font-size: 1.7rem;
-        }
-        /* 輪播副標、商品列表標題 */
-        h3 {
-            font-size: 1.5rem;
-        }
-        /* 商品內容價錢 */
-        h4 {
-            font-size: 1.3rem;
-        }
-        /* 首頁小輪播內文、商品列表價錢 */
-        h5 {
-            font-size: 1.2rem;
-        }
-        /* footer標題 */
-        h6 {
-            font-size: 1.1rem;
-        }
-        p {
-            font-size: 1rem;
-        }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    /* 輪播標題 */
+    h1 {
+        font-size: 2.5rem;
     }
-    
-    .imgFluid {
-        width: 100%;
-        height: auto;
+    /* 首頁標題、首頁內容標題、商品內容標題 */
+    h2 {
+        font-size: 1.7rem;
     }
-    
-    .pdTop20 {
-        padding-top: 20px;
+    /* 輪播副標、商品列表標題、訂單完成 */
+    h3 {
+        font-size: 1.5rem;
     }
-    
-    .pdTop30 {
-        padding-top: 30px;
+    /* 商品內容價錢 */
+    h4 {
+        font-size: 1.3rem;
     }
-    
-    .pdTop40 {
-        padding-top: 40px;
+    /* 首頁小輪播內文、商品列表價錢 */
+    h5 {
+        font-size: 1.2rem;
     }
-    
-    .pdTop50 {
-        padding-top: 50px;
+    /* footer標題 */
+    h6 {
+        font-size: 1.1rem;
     }
-    
-    .pdTop60 {
-        padding-top: 60px;
+    p {
+        font-size: 1rem;
     }
-    
-    .pdTop70 {
-        padding-top: 70px;
-    }
-    
-    .pdTop80 {
-        padding-top: 80px;
-    }
-    
-    .pdTop90 {
-        padding-top: 90px;
-    }
-    
-    .pdTop100 {
-        padding-top: 100px;
-    }
-    
-    .pdTop120 {
-        padding-top: 120px;
-    }
-    
-    .pdTop140 {
-        padding-top: 140px;
-    }
-    
-    .pdTop160 {
-        padding-top: 160px;
-    }
-    
-    .pdBtm20 {
-        padding-bottom: 20px;
-    }
-    
-    .pdBtm30 {
-        padding-bottom: 30px;
-    }
-    
-    .pdBtm40 {
-        padding-bottom: 40px;
-    }
-    
-    .pdBtm50 {
-        padding-bottom: 50px;
-    }
-    
-    .pdBtm60 {
-        padding-bottom: 60px;
-    }
-    
-    .pdBtm70 {
-        padding-bottom: 70px;
-    }
-    
-    .pdBtm80 {
-        padding-bottom: 80px;
-    }
-    
-    .pdBtm90 {
-        padding-bottom: 90px;
-    }
-    
-    .pdBtm100 {
-        padding-bottom: 100px;
-    }
-    
-    .pdBtm120 {
-        padding-bottom: 120px;
-    }
-    
-    .pdBtm140 {
-        padding-bottom: 140px;
-    }
-    
-    .pdBtm160 {
-        padding-top: 160px;
-    }
-    
-    .vCenter {
-        display: flex;
-        vertical-align: middle;
-        align-items: center;
-    }
-    
-    .noAnyPd {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    
-    .noPdBtm {
-        padding-bottom: 0
-    }
-    /* bootstrap grid ===================================== */
-    
+}
+
+.imgFluid {
+    width: 100%;
+    height: auto;
+}
+
+.pdTop20 {
+    padding-top: 20px;
+}
+
+.pdTop30 {
+    padding-top: 30px;
+}
+
+.pdTop40 {
+    padding-top: 40px;
+}
+
+.pdTop50 {
+    padding-top: 50px;
+}
+
+.pdTop60 {
+    padding-top: 60px;
+}
+
+.pdTop70 {
+    padding-top: 70px;
+}
+
+.pdTop80 {
+    padding-top: 80px;
+}
+
+.pdTop90 {
+    padding-top: 90px;
+}
+
+.pdTop100 {
+    padding-top: 100px;
+}
+
+.pdTop120 {
+    padding-top: 120px;
+}
+
+.pdTop140 {
+    padding-top: 140px;
+}
+
+.pdTop160 {
+    padding-top: 160px;
+}
+
+.pdBtm20 {
+    padding-bottom: 20px;
+}
+
+.pdBtm30 {
+    padding-bottom: 30px;
+}
+
+.pdBtm40 {
+    padding-bottom: 40px;
+}
+
+.pdBtm50 {
+    padding-bottom: 50px;
+}
+
+.pdBtm60 {
+    padding-bottom: 60px;
+}
+
+.pdBtm70 {
+    padding-bottom: 70px;
+}
+
+.pdBtm80 {
+    padding-bottom: 80px;
+}
+
+.pdBtm90 {
+    padding-bottom: 90px;
+}
+
+.pdBtm100 {
+    padding-bottom: 100px;
+}
+
+.pdBtm120 {
+    padding-bottom: 120px;
+}
+
+.pdBtm140 {
+    padding-bottom: 140px;
+}
+
+.pdBtm160 {
+    padding-top: 160px;
+}
+
+.vCenter {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.noAnyPd {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.noPdBtm {
+    padding-bottom: 0
+}
+
+
+/* bootstrap grid ===================================== */
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
     .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
+        max-width: 540px;
     }
-    
-    @media (min-width: 576px) {
-        .container {
-            max-width: 540px;
-        }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
     }
-    
-    @media (min-width: 768px) {
-        .container {
-            max-width: 720px;
-        }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
     }
-    
-    @media (min-width: 992px) {
-        .container {
-            max-width: 960px;
-        }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
     }
-    
-    @media (min-width: 1200px) {
-        .container {
-            max-width: 1140px;
-        }
-    }
-    
-    .container-fluid {
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    
-    .row {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-    
-    .no-gutters {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    
-    .no-gutters>.col,
-    .no-gutters>[class*="col-"] {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    
-    .col-1,
-    .col-2,
-    .col-3,
-    .col-4,
-    .col-5,
-    .col-6,
-    .col-7,
-    .col-8,
-    .col-9,
-    .col-10,
-    .col-11,
-    .col-12,
-    .col,
-    .col-auto,
-    .col-sm-1,
-    .col-sm-2,
-    .col-sm-3,
-    .col-sm-4,
-    .col-sm-5,
-    .col-sm-6,
-    .col-sm-7,
-    .col-sm-8,
-    .col-sm-9,
-    .col-sm-10,
-    .col-sm-11,
-    .col-sm-12,
-    .col-sm,
-    .col-sm-auto,
-    .col-md-1,
-    .col-md-2,
-    .col-md-3,
-    .col-md-4,
-    .col-md-5,
-    .col-md-6,
-    .col-md-7,
-    .col-md-8,
-    .col-md-9,
-    .col-md-10,
-    .col-md-11,
-    .col-md-12,
-    .col-md,
-    .col-md-auto,
-    .col-lg-1,
-    .col-lg-2,
-    .col-lg-3,
-    .col-lg-4,
-    .col-lg-5,
-    .col-lg-6,
-    .col-lg-7,
-    .col-lg-8,
-    .col-lg-9,
-    .col-lg-10,
-    .col-lg-11,
-    .col-lg-12,
-    .col-lg,
-    .col-lg-auto,
-    .col-xl-1,
-    .col-xl-2,
-    .col-xl-3,
-    .col-xl-4,
-    .col-xl-5,
-    .col-xl-6,
-    .col-xl-7,
-    .col-xl-8,
-    .col-xl-9,
-    .col-xl-10,
-    .col-xl-11,
-    .col-xl-12,
-    .col-xl,
-    .col-xl-auto {
-        position: relative;
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    
-    .col {
+}
+
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters>.col,
+.no-gutters>[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm,
+.col-sm-auto,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md,
+.col-md-auto,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg,
+.col-lg-auto,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl,
+.col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+.col-1 {
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
+}
+
+.col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+.col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.col-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+
+.col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+
+.col-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+.col-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.col-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+}
+
+.col-11 {
+    -ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.order-first {
+    -ms-flex-order: -1;
+    order: -1;
+}
+
+.order-last {
+    -ms-flex-order: 13;
+    order: 13;
+}
+
+.order-0 {
+    -ms-flex-order: 0;
+    order: 0;
+}
+
+.order-1 {
+    -ms-flex-order: 1;
+    order: 1;
+}
+
+.order-2 {
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.order-3 {
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+.order-4 {
+    -ms-flex-order: 4;
+    order: 4;
+}
+
+.order-5 {
+    -ms-flex-order: 5;
+    order: 5;
+}
+
+.order-6 {
+    -ms-flex-order: 6;
+    order: 6;
+}
+
+.order-7 {
+    -ms-flex-order: 7;
+    order: 7;
+}
+
+.order-8 {
+    -ms-flex-order: 8;
+    order: 8;
+}
+
+.order-9 {
+    -ms-flex-order: 9;
+    order: 9;
+}
+
+.order-10 {
+    -ms-flex-order: 10;
+    order: 10;
+}
+
+.order-11 {
+    -ms-flex-order: 11;
+    order: 11;
+}
+
+.order-12 {
+    -ms-flex-order: 12;
+    order: 12;
+}
+
+.offset-1 {
+    margin-left: 8.333333%;
+}
+
+.offset-2 {
+    margin-left: 16.666667%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.offset-4 {
+    margin-left: 33.333333%;
+}
+
+.offset-5 {
+    margin-left: 41.666667%;
+}
+
+.offset-6 {
+    margin-left: 50%;
+}
+
+.offset-7 {
+    margin-left: 58.333333%;
+}
+
+.offset-8 {
+    margin-left: 66.666667%;
+}
+
+.offset-9 {
+    margin-left: 75%;
+}
+
+.offset-10 {
+    margin-left: 83.333333%;
+}
+
+.offset-11 {
+    margin-left: 91.666667%;
+}
+
+@media (min-width: 576px) {
+    .col-sm {
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
         -ms-flex-positive: 1;
         flex-grow: 1;
         max-width: 100%;
     }
-    
-    .col-auto {
+    .col-sm-auto {
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         width: auto;
         max-width: 100%;
     }
-    
-    .col-1 {
+    .col-sm-1 {
         -ms-flex: 0 0 8.333333%;
         flex: 0 0 8.333333%;
         max-width: 8.333333%;
     }
-    
-    .col-2 {
+    .col-sm-2 {
         -ms-flex: 0 0 16.666667%;
         flex: 0 0 16.666667%;
         max-width: 16.666667%;
     }
-    
-    .col-3 {
+    .col-sm-3 {
         -ms-flex: 0 0 25%;
         flex: 0 0 25%;
         max-width: 25%;
     }
-    
-    .col-4 {
+    .col-sm-4 {
         -ms-flex: 0 0 33.333333%;
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
-    
-    .col-5 {
+    .col-sm-5 {
         -ms-flex: 0 0 41.666667%;
         flex: 0 0 41.666667%;
         max-width: 41.666667%;
     }
-    
-    .col-6 {
+    .col-sm-6 {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
     }
-    
-    .col-7 {
+    .col-sm-7 {
         -ms-flex: 0 0 58.333333%;
         flex: 0 0 58.333333%;
         max-width: 58.333333%;
     }
-    
-    .col-8 {
+    .col-sm-8 {
         -ms-flex: 0 0 66.666667%;
         flex: 0 0 66.666667%;
         max-width: 66.666667%;
     }
-    
-    .col-9 {
+    .col-sm-9 {
         -ms-flex: 0 0 75%;
         flex: 0 0 75%;
         max-width: 75%;
     }
-    
-    .col-10 {
+    .col-sm-10 {
         -ms-flex: 0 0 83.333333%;
         flex: 0 0 83.333333%;
         max-width: 83.333333%;
     }
-    
-    .col-11 {
+    .col-sm-11 {
         -ms-flex: 0 0 91.666667%;
         flex: 0 0 91.666667%;
         max-width: 91.666667%;
     }
-    
-    .col-12 {
+    .col-sm-12 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
     }
-    
-    .order-first {
+    .order-sm-first {
         -ms-flex-order: -1;
         order: -1;
     }
-    
-    .order-last {
+    .order-sm-last {
         -ms-flex-order: 13;
         order: 13;
     }
-    
-    .order-0 {
+    .order-sm-0 {
         -ms-flex-order: 0;
         order: 0;
     }
-    
-    .order-1 {
+    .order-sm-1 {
         -ms-flex-order: 1;
         order: 1;
     }
-    
-    .order-2 {
+    .order-sm-2 {
         -ms-flex-order: 2;
         order: 2;
     }
-    
-    .order-3 {
+    .order-sm-3 {
         -ms-flex-order: 3;
         order: 3;
     }
-    
-    .order-4 {
+    .order-sm-4 {
         -ms-flex-order: 4;
         order: 4;
     }
-    
-    .order-5 {
+    .order-sm-5 {
         -ms-flex-order: 5;
         order: 5;
     }
-    
-    .order-6 {
+    .order-sm-6 {
         -ms-flex-order: 6;
         order: 6;
     }
-    
-    .order-7 {
+    .order-sm-7 {
         -ms-flex-order: 7;
         order: 7;
     }
-    
-    .order-8 {
+    .order-sm-8 {
         -ms-flex-order: 8;
         order: 8;
     }
-    
-    .order-9 {
+    .order-sm-9 {
         -ms-flex-order: 9;
         order: 9;
     }
-    
-    .order-10 {
+    .order-sm-10 {
         -ms-flex-order: 10;
         order: 10;
     }
-    
-    .order-11 {
+    .order-sm-11 {
         -ms-flex-order: 11;
         order: 11;
     }
-    
-    .order-12 {
+    .order-sm-12 {
         -ms-flex-order: 12;
         order: 12;
     }
-    
-    .offset-1 {
+    .offset-sm-0 {
+        margin-left: 0;
+    }
+    .offset-sm-1 {
         margin-left: 8.333333%;
     }
-    
-    .offset-2 {
+    .offset-sm-2 {
         margin-left: 16.666667%;
     }
-    
-    .offset-3 {
+    .offset-sm-3 {
         margin-left: 25%;
     }
-    
-    .offset-4 {
+    .offset-sm-4 {
         margin-left: 33.333333%;
     }
-    
-    .offset-5 {
+    .offset-sm-5 {
         margin-left: 41.666667%;
     }
-    
-    .offset-6 {
+    .offset-sm-6 {
         margin-left: 50%;
     }
-    
-    .offset-7 {
+    .offset-sm-7 {
         margin-left: 58.333333%;
     }
-    
-    .offset-8 {
+    .offset-sm-8 {
         margin-left: 66.666667%;
     }
-    
-    .offset-9 {
+    .offset-sm-9 {
         margin-left: 75%;
     }
-    
-    .offset-10 {
+    .offset-sm-10 {
         margin-left: 83.333333%;
     }
-    
-    .offset-11 {
+    .offset-sm-11 {
         margin-left: 91.666667%;
     }
-    
-    @media (min-width: 576px) {
-        .col-sm {
-            -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-            max-width: 100%;
-        }
-        .col-sm-auto {
-            -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-            width: auto;
-            max-width: 100%;
-        }
-        .col-sm-1 {
-            -ms-flex: 0 0 8.333333%;
-            flex: 0 0 8.333333%;
-            max-width: 8.333333%;
-        }
-        .col-sm-2 {
-            -ms-flex: 0 0 16.666667%;
-            flex: 0 0 16.666667%;
-            max-width: 16.666667%;
-        }
-        .col-sm-3 {
-            -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-        .col-sm-4 {
-            -ms-flex: 0 0 33.333333%;
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-        }
-        .col-sm-5 {
-            -ms-flex: 0 0 41.666667%;
-            flex: 0 0 41.666667%;
-            max-width: 41.666667%;
-        }
-        .col-sm-6 {
-            -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-        .col-sm-7 {
-            -ms-flex: 0 0 58.333333%;
-            flex: 0 0 58.333333%;
-            max-width: 58.333333%;
-        }
-        .col-sm-8 {
-            -ms-flex: 0 0 66.666667%;
-            flex: 0 0 66.666667%;
-            max-width: 66.666667%;
-        }
-        .col-sm-9 {
-            -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
-            max-width: 75%;
-        }
-        .col-sm-10 {
-            -ms-flex: 0 0 83.333333%;
-            flex: 0 0 83.333333%;
-            max-width: 83.333333%;
-        }
-        .col-sm-11 {
-            -ms-flex: 0 0 91.666667%;
-            flex: 0 0 91.666667%;
-            max-width: 91.666667%;
-        }
-        .col-sm-12 {
-            -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-        .order-sm-first {
-            -ms-flex-order: -1;
-            order: -1;
-        }
-        .order-sm-last {
-            -ms-flex-order: 13;
-            order: 13;
-        }
-        .order-sm-0 {
-            -ms-flex-order: 0;
-            order: 0;
-        }
-        .order-sm-1 {
-            -ms-flex-order: 1;
-            order: 1;
-        }
-        .order-sm-2 {
-            -ms-flex-order: 2;
-            order: 2;
-        }
-        .order-sm-3 {
-            -ms-flex-order: 3;
-            order: 3;
-        }
-        .order-sm-4 {
-            -ms-flex-order: 4;
-            order: 4;
-        }
-        .order-sm-5 {
-            -ms-flex-order: 5;
-            order: 5;
-        }
-        .order-sm-6 {
-            -ms-flex-order: 6;
-            order: 6;
-        }
-        .order-sm-7 {
-            -ms-flex-order: 7;
-            order: 7;
-        }
-        .order-sm-8 {
-            -ms-flex-order: 8;
-            order: 8;
-        }
-        .order-sm-9 {
-            -ms-flex-order: 9;
-            order: 9;
-        }
-        .order-sm-10 {
-            -ms-flex-order: 10;
-            order: 10;
-        }
-        .order-sm-11 {
-            -ms-flex-order: 11;
-            order: 11;
-        }
-        .order-sm-12 {
-            -ms-flex-order: 12;
-            order: 12;
-        }
-        .offset-sm-0 {
-            margin-left: 0;
-        }
-        .offset-sm-1 {
-            margin-left: 8.333333%;
-        }
-        .offset-sm-2 {
-            margin-left: 16.666667%;
-        }
-        .offset-sm-3 {
-            margin-left: 25%;
-        }
-        .offset-sm-4 {
-            margin-left: 33.333333%;
-        }
-        .offset-sm-5 {
-            margin-left: 41.666667%;
-        }
-        .offset-sm-6 {
-            margin-left: 50%;
-        }
-        .offset-sm-7 {
-            margin-left: 58.333333%;
-        }
-        .offset-sm-8 {
-            margin-left: 66.666667%;
-        }
-        .offset-sm-9 {
-            margin-left: 75%;
-        }
-        .offset-sm-10 {
-            margin-left: 83.333333%;
-        }
-        .offset-sm-11 {
-            margin-left: 91.666667%;
-        }
+}
+
+@media (min-width: 768px) {
+    .col-md {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
     }
-    
-    @media (min-width: 768px) {
-        .col-md {
-            -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-            max-width: 100%;
-        }
-        .col-md-auto {
-            -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-            width: auto;
-            max-width: 100%;
-        }
-        .col-md-1 {
-            -ms-flex: 0 0 8.333333%;
-            flex: 0 0 8.333333%;
-            max-width: 8.333333%;
-        }
-        .col-md-2 {
-            -ms-flex: 0 0 16.666667%;
-            flex: 0 0 16.666667%;
-            max-width: 16.666667%;
-        }
-        .col-md-3 {
-            -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-        .col-md-4 {
-            -ms-flex: 0 0 33.333333%;
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-        }
-        .col-md-5 {
-            -ms-flex: 0 0 41.666667%;
-            flex: 0 0 41.666667%;
-            max-width: 41.666667%;
-        }
-        .col-md-6 {
-            -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-        .col-md-7 {
-            -ms-flex: 0 0 58.333333%;
-            flex: 0 0 58.333333%;
-            max-width: 58.333333%;
-        }
-        .col-md-8 {
-            -ms-flex: 0 0 66.666667%;
-            flex: 0 0 66.666667%;
-            max-width: 66.666667%;
-        }
-        .col-md-9 {
-            -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
-            max-width: 75%;
-        }
-        .col-md-10 {
-            -ms-flex: 0 0 83.333333%;
-            flex: 0 0 83.333333%;
-            max-width: 83.333333%;
-        }
-        .col-md-11 {
-            -ms-flex: 0 0 91.666667%;
-            flex: 0 0 91.666667%;
-            max-width: 91.666667%;
-        }
-        .col-md-12 {
-            -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-        .order-md-first {
-            -ms-flex-order: -1;
-            order: -1;
-        }
-        .order-md-last {
-            -ms-flex-order: 13;
-            order: 13;
-        }
-        .order-md-0 {
-            -ms-flex-order: 0;
-            order: 0;
-        }
-        .order-md-1 {
-            -ms-flex-order: 1;
-            order: 1;
-        }
-        .order-md-2 {
-            -ms-flex-order: 2;
-            order: 2;
-        }
-        .order-md-3 {
-            -ms-flex-order: 3;
-            order: 3;
-        }
-        .order-md-4 {
-            -ms-flex-order: 4;
-            order: 4;
-        }
-        .order-md-5 {
-            -ms-flex-order: 5;
-            order: 5;
-        }
-        .order-md-6 {
-            -ms-flex-order: 6;
-            order: 6;
-        }
-        .order-md-7 {
-            -ms-flex-order: 7;
-            order: 7;
-        }
-        .order-md-8 {
-            -ms-flex-order: 8;
-            order: 8;
-        }
-        .order-md-9 {
-            -ms-flex-order: 9;
-            order: 9;
-        }
-        .order-md-10 {
-            -ms-flex-order: 10;
-            order: 10;
-        }
-        .order-md-11 {
-            -ms-flex-order: 11;
-            order: 11;
-        }
-        .order-md-12 {
-            -ms-flex-order: 12;
-            order: 12;
-        }
-        .offset-md-0 {
-            margin-left: 0;
-        }
-        .offset-md-1 {
-            margin-left: 8.333333%;
-        }
-        .offset-md-2 {
-            margin-left: 16.666667%;
-        }
-        .offset-md-3 {
-            margin-left: 25%;
-        }
-        .offset-md-4 {
-            margin-left: 33.333333%;
-        }
-        .offset-md-5 {
-            margin-left: 41.666667%;
-        }
-        .offset-md-6 {
-            margin-left: 50%;
-        }
-        .offset-md-7 {
-            margin-left: 58.333333%;
-        }
-        .offset-md-8 {
-            margin-left: 66.666667%;
-        }
-        .offset-md-9 {
-            margin-left: 75%;
-        }
-        .offset-md-10 {
-            margin-left: 83.333333%;
-        }
-        .offset-md-11 {
-            margin-left: 91.666667%;
-        }
+    .col-md-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
     }
-    
-    @media (min-width: 992px) {
-        .col-lg {
-            -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-            max-width: 100%;
-        }
-        .col-lg-auto {
-            -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-            width: auto;
-            max-width: 100%;
-        }
-        .col-lg-1 {
-            -ms-flex: 0 0 8.333333%;
-            flex: 0 0 8.333333%;
-            max-width: 8.333333%;
-        }
-        .col-lg-2 {
-            -ms-flex: 0 0 16.666667%;
-            flex: 0 0 16.666667%;
-            max-width: 16.666667%;
-        }
-        .col-lg-3 {
-            -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-        .col-lg-4 {
-            -ms-flex: 0 0 33.333333%;
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-        }
-        .col-lg-5 {
-            -ms-flex: 0 0 41.666667%;
-            flex: 0 0 41.666667%;
-            max-width: 41.666667%;
-        }
-        .col-lg-6 {
-            -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-        .col-lg-7 {
-            -ms-flex: 0 0 58.333333%;
-            flex: 0 0 58.333333%;
-            max-width: 58.333333%;
-        }
-        .col-lg-8 {
-            -ms-flex: 0 0 66.666667%;
-            flex: 0 0 66.666667%;
-            max-width: 66.666667%;
-        }
-        .col-lg-9 {
-            -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
-            max-width: 75%;
-        }
-        .col-lg-10 {
-            -ms-flex: 0 0 83.333333%;
-            flex: 0 0 83.333333%;
-            max-width: 83.333333%;
-        }
-        .col-lg-11 {
-            -ms-flex: 0 0 91.666667%;
-            flex: 0 0 91.666667%;
-            max-width: 91.666667%;
-        }
-        .col-lg-12 {
-            -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-        .order-lg-first {
-            -ms-flex-order: -1;
-            order: -1;
-        }
-        .order-lg-last {
-            -ms-flex-order: 13;
-            order: 13;
-        }
-        .order-lg-0 {
-            -ms-flex-order: 0;
-            order: 0;
-        }
-        .order-lg-1 {
-            -ms-flex-order: 1;
-            order: 1;
-        }
-        .order-lg-2 {
-            -ms-flex-order: 2;
-            order: 2;
-        }
-        .order-lg-3 {
-            -ms-flex-order: 3;
-            order: 3;
-        }
-        .order-lg-4 {
-            -ms-flex-order: 4;
-            order: 4;
-        }
-        .order-lg-5 {
-            -ms-flex-order: 5;
-            order: 5;
-        }
-        .order-lg-6 {
-            -ms-flex-order: 6;
-            order: 6;
-        }
-        .order-lg-7 {
-            -ms-flex-order: 7;
-            order: 7;
-        }
-        .order-lg-8 {
-            -ms-flex-order: 8;
-            order: 8;
-        }
-        .order-lg-9 {
-            -ms-flex-order: 9;
-            order: 9;
-        }
-        .order-lg-10 {
-            -ms-flex-order: 10;
-            order: 10;
-        }
-        .order-lg-11 {
-            -ms-flex-order: 11;
-            order: 11;
-        }
-        .order-lg-12 {
-            -ms-flex-order: 12;
-            order: 12;
-        }
-        .offset-lg-0 {
-            margin-left: 0;
-        }
-        .offset-lg-1 {
-            margin-left: 8.333333%;
-        }
-        .offset-lg-2 {
-            margin-left: 16.666667%;
-        }
-        .offset-lg-3 {
-            margin-left: 25%;
-        }
-        .offset-lg-4 {
-            margin-left: 33.333333%;
-        }
-        .offset-lg-5 {
-            margin-left: 41.666667%;
-        }
-        .offset-lg-6 {
-            margin-left: 50%;
-        }
-        .offset-lg-7 {
-            margin-left: 58.333333%;
-        }
-        .offset-lg-8 {
-            margin-left: 66.666667%;
-        }
-        .offset-lg-9 {
-            margin-left: 75%;
-        }
-        .offset-lg-10 {
-            margin-left: 83.333333%;
-        }
-        .offset-lg-11 {
-            margin-left: 91.666667%;
-        }
+    .col-md-1 {
+        -ms-flex: 0 0 8.333333%;
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
     }
-    
-    @media (min-width: 1200px) {
-        .col-xl {
-            -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-            max-width: 100%;
-        }
-        .col-xl-auto {
-            -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-            width: auto;
-            max-width: 100%;
-        }
-        .col-xl-1 {
-            -ms-flex: 0 0 8.333333%;
-            flex: 0 0 8.333333%;
-            max-width: 8.333333%;
-        }
-        .col-xl-2 {
-            -ms-flex: 0 0 16.666667%;
-            flex: 0 0 16.666667%;
-            max-width: 16.666667%;
-        }
-        .col-xl-3 {
-            -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-        .col-xl-4 {
-            -ms-flex: 0 0 33.333333%;
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%;
-        }
-        .col-xl-5 {
-            -ms-flex: 0 0 41.666667%;
-            flex: 0 0 41.666667%;
-            max-width: 41.666667%;
-        }
-        .col-xl-6 {
-            -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-        .col-xl-7 {
-            -ms-flex: 0 0 58.333333%;
-            flex: 0 0 58.333333%;
-            max-width: 58.333333%;
-        }
-        .col-xl-8 {
-            -ms-flex: 0 0 66.666667%;
-            flex: 0 0 66.666667%;
-            max-width: 66.666667%;
-        }
-        .col-xl-9 {
-            -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
-            max-width: 75%;
-        }
-        .col-xl-10 {
-            -ms-flex: 0 0 83.333333%;
-            flex: 0 0 83.333333%;
-            max-width: 83.333333%;
-        }
-        .col-xl-11 {
-            -ms-flex: 0 0 91.666667%;
-            flex: 0 0 91.666667%;
-            max-width: 91.666667%;
-        }
-        .col-xl-12 {
-            -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-        .order-xl-first {
-            -ms-flex-order: -1;
-            order: -1;
-        }
-        .order-xl-last {
-            -ms-flex-order: 13;
-            order: 13;
-        }
-        .order-xl-0 {
-            -ms-flex-order: 0;
-            order: 0;
-        }
-        .order-xl-1 {
-            -ms-flex-order: 1;
-            order: 1;
-        }
-        .order-xl-2 {
-            -ms-flex-order: 2;
-            order: 2;
-        }
-        .order-xl-3 {
-            -ms-flex-order: 3;
-            order: 3;
-        }
-        .order-xl-4 {
-            -ms-flex-order: 4;
-            order: 4;
-        }
-        .order-xl-5 {
-            -ms-flex-order: 5;
-            order: 5;
-        }
-        .order-xl-6 {
-            -ms-flex-order: 6;
-            order: 6;
-        }
-        .order-xl-7 {
-            -ms-flex-order: 7;
-            order: 7;
-        }
-        .order-xl-8 {
-            -ms-flex-order: 8;
-            order: 8;
-        }
-        .order-xl-9 {
-            -ms-flex-order: 9;
-            order: 9;
-        }
-        .order-xl-10 {
-            -ms-flex-order: 10;
-            order: 10;
-        }
-        .order-xl-11 {
-            -ms-flex-order: 11;
-            order: 11;
-        }
-        .order-xl-12 {
-            -ms-flex-order: 12;
-            order: 12;
-        }
-        .offset-xl-0 {
-            margin-left: 0;
-        }
-        .offset-xl-1 {
-            margin-left: 8.333333%;
-        }
-        .offset-xl-2 {
-            margin-left: 16.666667%;
-        }
-        .offset-xl-3 {
-            margin-left: 25%;
-        }
-        .offset-xl-4 {
-            margin-left: 33.333333%;
-        }
-        .offset-xl-5 {
-            margin-left: 41.666667%;
-        }
-        .offset-xl-6 {
-            margin-left: 50%;
-        }
-        .offset-xl-7 {
-            margin-left: 58.333333%;
-        }
-        .offset-xl-8 {
-            margin-left: 66.666667%;
-        }
-        .offset-xl-9 {
-            margin-left: 75%;
-        }
-        .offset-xl-10 {
-            margin-left: 83.333333%;
-        }
-        .offset-xl-11 {
-            margin-left: 91.666667%;
-        }
+    .col-md-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
     }
-    
-    .d-none {
+    .col-md-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-md-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .col-md-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-md-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .col-md-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .col-md-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-md-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    .col-md-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+    .col-md-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .order-md-first {
+        -ms-flex-order: -1;
+        order: -1;
+    }
+    .order-md-last {
+        -ms-flex-order: 13;
+        order: 13;
+    }
+    .order-md-0 {
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    .order-md-1 {
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    .order-md-2 {
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    .order-md-3 {
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    .order-md-4 {
+        -ms-flex-order: 4;
+        order: 4;
+    }
+    .order-md-5 {
+        -ms-flex-order: 5;
+        order: 5;
+    }
+    .order-md-6 {
+        -ms-flex-order: 6;
+        order: 6;
+    }
+    .order-md-7 {
+        -ms-flex-order: 7;
+        order: 7;
+    }
+    .order-md-8 {
+        -ms-flex-order: 8;
+        order: 8;
+    }
+    .order-md-9 {
+        -ms-flex-order: 9;
+        order: 9;
+    }
+    .order-md-10 {
+        -ms-flex-order: 10;
+        order: 10;
+    }
+    .order-md-11 {
+        -ms-flex-order: 11;
+        order: 11;
+    }
+    .order-md-12 {
+        -ms-flex-order: 12;
+        order: 12;
+    }
+    .offset-md-0 {
+        margin-left: 0;
+    }
+    .offset-md-1 {
+        margin-left: 8.333333%;
+    }
+    .offset-md-2 {
+        margin-left: 16.666667%;
+    }
+    .offset-md-3 {
+        margin-left: 25%;
+    }
+    .offset-md-4 {
+        margin-left: 33.333333%;
+    }
+    .offset-md-5 {
+        margin-left: 41.666667%;
+    }
+    .offset-md-6 {
+        margin-left: 50%;
+    }
+    .offset-md-7 {
+        margin-left: 58.333333%;
+    }
+    .offset-md-8 {
+        margin-left: 66.666667%;
+    }
+    .offset-md-9 {
+        margin-left: 75%;
+    }
+    .offset-md-10 {
+        margin-left: 83.333333%;
+    }
+    .offset-md-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-lg-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    .col-lg-1 {
+        -ms-flex: 0 0 8.333333%;
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
+    }
+    .col-lg-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+    .col-lg-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-lg-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-lg-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .col-lg-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-lg-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .col-lg-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .col-lg-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-lg-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    .col-lg-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+    .col-lg-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .order-lg-first {
+        -ms-flex-order: -1;
+        order: -1;
+    }
+    .order-lg-last {
+        -ms-flex-order: 13;
+        order: 13;
+    }
+    .order-lg-0 {
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    .order-lg-1 {
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    .order-lg-2 {
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    .order-lg-3 {
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    .order-lg-4 {
+        -ms-flex-order: 4;
+        order: 4;
+    }
+    .order-lg-5 {
+        -ms-flex-order: 5;
+        order: 5;
+    }
+    .order-lg-6 {
+        -ms-flex-order: 6;
+        order: 6;
+    }
+    .order-lg-7 {
+        -ms-flex-order: 7;
+        order: 7;
+    }
+    .order-lg-8 {
+        -ms-flex-order: 8;
+        order: 8;
+    }
+    .order-lg-9 {
+        -ms-flex-order: 9;
+        order: 9;
+    }
+    .order-lg-10 {
+        -ms-flex-order: 10;
+        order: 10;
+    }
+    .order-lg-11 {
+        -ms-flex-order: 11;
+        order: 11;
+    }
+    .order-lg-12 {
+        -ms-flex-order: 12;
+        order: 12;
+    }
+    .offset-lg-0 {
+        margin-left: 0;
+    }
+    .offset-lg-1 {
+        margin-left: 8.333333%;
+    }
+    .offset-lg-2 {
+        margin-left: 16.666667%;
+    }
+    .offset-lg-3 {
+        margin-left: 25%;
+    }
+    .offset-lg-4 {
+        margin-left: 33.333333%;
+    }
+    .offset-lg-5 {
+        margin-left: 41.666667%;
+    }
+    .offset-lg-6 {
+        margin-left: 50%;
+    }
+    .offset-lg-7 {
+        margin-left: 58.333333%;
+    }
+    .offset-lg-8 {
+        margin-left: 66.666667%;
+    }
+    .offset-lg-9 {
+        margin-left: 75%;
+    }
+    .offset-lg-10 {
+        margin-left: 83.333333%;
+    }
+    .offset-lg-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-xl-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    .col-xl-1 {
+        -ms-flex: 0 0 8.333333%;
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
+    }
+    .col-xl-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+    .col-xl-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-xl-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-xl-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .col-xl-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-xl-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .col-xl-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .col-xl-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-xl-10 {
+        -ms-flex: 0 0 83.333333%;
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+    .col-xl-11 {
+        -ms-flex: 0 0 91.666667%;
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+    .col-xl-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .order-xl-first {
+        -ms-flex-order: -1;
+        order: -1;
+    }
+    .order-xl-last {
+        -ms-flex-order: 13;
+        order: 13;
+    }
+    .order-xl-0 {
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    .order-xl-1 {
+        -ms-flex-order: 1;
+        order: 1;
+    }
+    .order-xl-2 {
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    .order-xl-3 {
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    .order-xl-4 {
+        -ms-flex-order: 4;
+        order: 4;
+    }
+    .order-xl-5 {
+        -ms-flex-order: 5;
+        order: 5;
+    }
+    .order-xl-6 {
+        -ms-flex-order: 6;
+        order: 6;
+    }
+    .order-xl-7 {
+        -ms-flex-order: 7;
+        order: 7;
+    }
+    .order-xl-8 {
+        -ms-flex-order: 8;
+        order: 8;
+    }
+    .order-xl-9 {
+        -ms-flex-order: 9;
+        order: 9;
+    }
+    .order-xl-10 {
+        -ms-flex-order: 10;
+        order: 10;
+    }
+    .order-xl-11 {
+        -ms-flex-order: 11;
+        order: 11;
+    }
+    .order-xl-12 {
+        -ms-flex-order: 12;
+        order: 12;
+    }
+    .offset-xl-0 {
+        margin-left: 0;
+    }
+    .offset-xl-1 {
+        margin-left: 8.333333%;
+    }
+    .offset-xl-2 {
+        margin-left: 16.666667%;
+    }
+    .offset-xl-3 {
+        margin-left: 25%;
+    }
+    .offset-xl-4 {
+        margin-left: 33.333333%;
+    }
+    .offset-xl-5 {
+        margin-left: 41.666667%;
+    }
+    .offset-xl-6 {
+        margin-left: 50%;
+    }
+    .offset-xl-7 {
+        margin-left: 58.333333%;
+    }
+    .offset-xl-8 {
+        margin-left: 66.666667%;
+    }
+    .offset-xl-9 {
+        margin-left: 75%;
+    }
+    .offset-xl-10 {
+        margin-left: 83.333333%;
+    }
+    .offset-xl-11 {
+        margin-left: 91.666667%;
+    }
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-table {
+    display: table !important;
+}
+
+.d-table-row {
+    display: table-row !important;
+}
+
+.d-table-cell {
+    display: table-cell !important;
+}
+
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.d-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+}
+
+@media (min-width: 576px) {
+    .d-sm-none {
         display: none !important;
     }
-    
-    .d-inline {
+    .d-sm-inline {
         display: inline !important;
     }
-    
-    .d-inline-block {
+    .d-sm-inline-block {
         display: inline-block !important;
     }
-    
-    .d-block {
+    .d-sm-block {
         display: block !important;
     }
-    
-    .d-table {
+    .d-sm-table {
         display: table !important;
     }
-    
-    .d-table-row {
+    .d-sm-table-row {
         display: table-row !important;
     }
-    
-    .d-table-cell {
+    .d-sm-table-cell {
         display: table-cell !important;
     }
-    
-    .d-flex {
+    .d-sm-flex {
         display: -ms-flexbox !important;
         display: flex !important;
     }
-    
-    .d-inline-flex {
+    .d-sm-inline-flex {
         display: -ms-inline-flexbox !important;
         display: inline-flex !important;
     }
-    
-    @media (min-width: 576px) {
-        .d-sm-none {
-            display: none !important;
-        }
-        .d-sm-inline {
-            display: inline !important;
-        }
-        .d-sm-inline-block {
-            display: inline-block !important;
-        }
-        .d-sm-block {
-            display: block !important;
-        }
-        .d-sm-table {
-            display: table !important;
-        }
-        .d-sm-table-row {
-            display: table-row !important;
-        }
-        .d-sm-table-cell {
-            display: table-cell !important;
-        }
-        .d-sm-flex {
-            display: -ms-flexbox !important;
-            display: flex !important;
-        }
-        .d-sm-inline-flex {
-            display: -ms-inline-flexbox !important;
-            display: inline-flex !important;
-        }
+}
+
+@media (min-width: 768px) {
+    .d-md-none {
+        display: none !important;
     }
-    
-    @media (min-width: 768px) {
-        .d-md-none {
-            display: none !important;
-        }
-        .d-md-inline {
-            display: inline !important;
-        }
-        .d-md-inline-block {
-            display: inline-block !important;
-        }
-        .d-md-block {
-            display: block !important;
-        }
-        .d-md-table {
-            display: table !important;
-        }
-        .d-md-table-row {
-            display: table-row !important;
-        }
-        .d-md-table-cell {
-            display: table-cell !important;
-        }
-        .d-md-flex {
-            display: -ms-flexbox !important;
-            display: flex !important;
-        }
-        .d-md-inline-flex {
-            display: -ms-inline-flexbox !important;
-            display: inline-flex !important;
-        }
+    .d-md-inline {
+        display: inline !important;
     }
-    
-    @media (min-width: 992px) {
-        .d-lg-none {
-            display: none !important;
-        }
-        .d-lg-inline {
-            display: inline !important;
-        }
-        .d-lg-inline-block {
-            display: inline-block !important;
-        }
-        .d-lg-block {
-            display: block !important;
-        }
-        .d-lg-table {
-            display: table !important;
-        }
-        .d-lg-table-row {
-            display: table-row !important;
-        }
-        .d-lg-table-cell {
-            display: table-cell !important;
-        }
-        .d-lg-flex {
-            display: -ms-flexbox !important;
-            display: flex !important;
-        }
-        .d-lg-inline-flex {
-            display: -ms-inline-flexbox !important;
-            display: inline-flex !important;
-        }
+    .d-md-inline-block {
+        display: inline-block !important;
     }
-    
-    @media (min-width: 1200px) {
-        .d-xl-none {
-            display: none !important;
-        }
-        .d-xl-inline {
-            display: inline !important;
-        }
-        .d-xl-inline-block {
-            display: inline-block !important;
-        }
-        .d-xl-block {
-            display: block !important;
-        }
-        .d-xl-table {
-            display: table !important;
-        }
-        .d-xl-table-row {
-            display: table-row !important;
-        }
-        .d-xl-table-cell {
-            display: table-cell !important;
-        }
-        .d-xl-flex {
-            display: -ms-flexbox !important;
-            display: flex !important;
-        }
-        .d-xl-inline-flex {
-            display: -ms-inline-flexbox !important;
-            display: inline-flex !important;
-        }
+    .d-md-block {
+        display: block !important;
     }
-    /* hr原本就是區塊層級可直接+margin auto */
-    
-    hr {
-        margin: 5px auto;
+    .d-md-table {
+        display: table !important;
     }
-    /* header ===================================== */
-    
-    header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 9999;
-        background-color: #E8E0D4;
+    .d-md-table-row {
+        display: table-row !important;
     }
-    
-    header.fixed {
-        position: fixed;
-        width: 100%;
-        left: 0;
-        top: 0;
-        animation: headerAni 0.8s;
+    .d-md-table-cell {
+        display: table-cell !important;
     }
-    
-    @keyframes headerAni {
-        0% {
-            transform: translateY(-150px);
-        }
-        100% {
-            transform: translateY(0px);
-        }
+    .d-md-flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
     }
-    /* 導覽列 */
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        /* 先將logo改為區塊層級再+margin auto置中 */
-        header .logo {
-            display: block;
-            margin: 10px auto;
-            margin-top: 25px;
-            width: 60px;
-            max-width: 30%;
-        }
-        header .showMenu {
-            display: none;
-        }
-        /* Grid寫法 */
-        header nav {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr) 1fr repeat(5, 110px) 1fr repeat(5, 1fr);
-            width: 85%;
-            margin: 0 auto;
-            justify-content: center;
-        }
-        header nav a {
-            color: #333333;
-            display: flex;
-            width: auto;
-            justify-content: center;
-            transition: opacity 0.3s ease;
-        }
-        header nav a:hover {
-            opacity: 0.4;
-        }
-        header nav a:nth-child(1) {
-            grid-column-start: 7;
-        }
-        header nav a:nth-child(6) {
-            grid-column-start: 15;
-        }
-        header nav a:nth-child(6),
-        header nav a:nth-child(7),
-        header nav a:nth-child(8) {
-            margin-left: auto;
-            width: 45px;
-            height: 45px;
-        }
-        header nav a:nth-child(6)::before,
-        header nav a:nth-child(7)::before,
-        header nav a:nth-child(8)::before {
-            content: "";
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            background-image: url(../images/icon/icon.svg);
-            background-size: auto 100%;
-            align-self: center;
-        }
-        header nav a:nth-child(6)::before {
-            background-position: 0 0;
-        }
-        header nav a:nth-child(7)::before {
-            background-position: -25px 0;
-        }
-        header nav a:nth-child(8)::before {
-            background-position: -50px 0;
-        }
-        header nav a .transTw {
-            opacity: 0;
-            position: absolute;
-            font-size: 0.9rem;
-        }
-        header nav a:hover .transTw {
-            opacity: 1;
-            line-height: 47px;
-            transition: opacity 0.3s ease;
-        }
-        header nav a .transEn {
-            opacity: 1;
-            line-height: 45px;
-            transition: opacity 0.3s ease;
-        }
-        header nav a:hover .transEn {
-            opacity: 0;
-            position: absolute;
-        }
+    .d-md-inline-flex {
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
     }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        header .logo {
-            width: 60px;
-            position: relative;
-            top: 0;
-            left: 0;
-            margin: 15px auto;
-            z-index: 9999;
-        }
-        header .showMenu {
-            display: block;
-            position: absolute;
-            left: 15px;
-            top: 15px;
-            z-index: 9999;
-        }
-        header nav {
-            display: none;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 150vh;
-            padding: 120px 0;
-            background-color: #f7f2f0;
-            background-size: cover;
-            z-index: 9998;
-        }
-        header nav a {
-            color: #333333;
-            display: block;
-            background-color: rgb(118, 118, 118, 0.1);
-            width: 65%;
-            height: auto;
-            padding: 12px;
-            margin: 10px auto;
-            text-align: center;
-        }
-        header nav a:nth-child(6),
-        header nav a:nth-child(7),
-        header nav a:nth-child(8) {
-            display: none;
-        }
-        header nav a .transEn {
-            font-size: 1.1rem;
-        }
-        header nav a .transTw {
-            display: none;
-        }
-        .hamburger .line {
-            width: 20px;
-            height: 2px;
-            background-color: #767676;
-            display: block;
-            margin: 5px auto;
-            transition: all 300ms;
-        }
-        #hamburger-1.is-active .line:nth-child(2) {
-            opacity: 0;
-        }
-        #hamburger-1.is-active .line:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-        }
-        #hamburger-1.is-active .line:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
+}
+
+@media (min-width: 992px) {
+    .d-lg-none {
+        display: none !important;
     }
-    /* 底部項目 ===================================== */
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        .btmBox {
-            display: none;
-        }
+    .d-lg-inline {
+        display: inline !important;
     }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        .btmBox {
-            display: flex;
-            position: fixed;
-            background-color: #D8CDC3;
-            bottom: 0;
-            z-index: 9999;
-            width: 100%;
-            justify-content: center
-        }
-        .btmBox .item {
-            margin: 15px 28px;
-        }
-        .btmBox .item:nth-child(1),
-        .btmBox .item:nth-child(2),
-        .btmBox .item:nth-child(3),
-        .btmBox .item:nth-child(4) {
-            padding: 10px;
-            width: 25px;
-            height: 25px;
-            background-image: url(../images/icon/icon.svg);
-            background-size: auto 100%;
-            align-self: center;
-            transform: scale(1.2)
-        }
-        .btmBox .search {
-            background-position: 0 0;
-        }
-        .btmBox .member {
-            background-position: -25px 0;
-        }
-        .btmBox .cart {
-            background-position: -50px 0;
-        }
-        .btmBox .gotop {
-            background-position: -75px 0;
-        }
+    .d-lg-inline-block {
+        display: inline-block !important;
     }
-    /* footer ===================================== */
-    
-    footer {
-        background-color: #C9BAAB;
-        /* footer若需貼底部須新增以下 */
-        margin-top: auto;
+    .d-lg-block {
+        display: block !important;
     }
-    
-    footer div {
-        margin-bottom: 15px;
+    .d-lg-table {
+        display: table !important;
     }
-    
-    footer h6 {
-        line-height: 30px;
+    .d-lg-table-row {
+        display: table-row !important;
     }
-    /* index ===================================== */
-    
-    body section {
-        min-height: 100%;
+    .d-lg-table-cell {
+        display: table-cell !important;
     }
-    
-    .title {
-        line-height: 40px;
-        text-align: center;
+    .d-lg-flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
     }
-    /* 商品輪播圖 */
-    
-    .prev {
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        color: #767676;
-        cursor: pointer;
+    .d-lg-inline-flex {
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
     }
-    
-    .next {
-        position: absolute;
-        top: 50%;
-        right: -5%;
-        color: #767676;
-        cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+    .d-xl-none {
+        display: none !important;
     }
-    
-    .slick-slide {
-        outline: none
+    .d-xl-inline {
+        display: inline !important;
     }
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        .sliderTitle {
-            position: relative;
-        }
-        /* Absolute + translate置中 */
-        .sliderTitle>.title {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            color: #E8E0D4;
-            transform: translate(-50%, -50%);
-        }
-        .sliderTitle>.content {
-            position: absolute;
-            top: 62%;
-            left: 50%;
-            color: #E8E0D4;
-            transform: translate(-50%, -50%);
-        }
+    .d-xl-inline-block {
+        display: inline-block !important;
     }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        .sliderTitle {
-            position: relative;
-            margin-top: 90px;
-        }
-        .sliderTitle>.title {
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            color: #E8E0D4;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        .sliderTitle>.content {
-            width: 100%;
-            position: absolute;
-            top: 65%;
-            left: 50%;
-            color: #E8E0D4;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        .slidePd {
-            padding-top: 40px!important;
-        }
+    .d-xl-block {
+        display: block !important;
     }
-    /* 商品輪播圖按鈕 */
-    
-    .sliderImg {
-        padding: 10px;
-        text-align: center;
-        line-height: 32px;
+    .d-xl-table {
+        display: table !important;
     }
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        /* 按鈕樣式 */
-        .sliderTitle .btnSet {
-            line-height: 50px;
-            height: 50px;
-            text-align: center;
-            width: 140px;
-            cursor: pointer;
-            transition: all 5s;
-            border-radius: 10px;
-            position: relative;
-            color: #333333;
-            background-color: #E8E0D4;
-            position: absolute;
-            top: 65%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        /* 按鈕內文字樣式 */
-        .sliderTitle .btnSet span {
-            display: block;
-            position: absolute;
-            width: 140px;
-            height: 100%;
-            transition: all 0.7s;
-            font-size: 1.2rem;
-        }
-        .sliderTitle .btnSet span:hover {
-            color: #E8E0D4;
-        }
-        /* 按鈕滑過開始 */
-        .sliderTitle .btnSet::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            opacity: 0;
-            border-radius: 10px;
-            background-color: #767676;
-            transition: all 0.4s;
-        }
-        /* 按鈕滑過結束 */
-        .sliderTitle .btnSet:hover::before {
-            opacity: 1;
-            width: 100%;
-        }
+    .d-xl-table-row {
+        display: table-row !important;
     }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        /* 按鈕樣式 */
-        .sliderTitle .btnSet {
-            line-height: 30px;
-            height: 30px;
-            text-align: center;
-            width: 90px;
-            cursor: pointer;
-            transition: all 5s;
-            border-radius: 6px;
-            position: relative;
-            color: #333333;
-            background-color: #E8E0D4;
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        /* 按鈕內文字樣式 */
-        .sliderTitle .btnSet span {
-            display: block;
-            position: absolute;
-            width: 90px;
-            height: 100%;
-            transition: all 0.7s;
-        }
+    .d-xl-table-cell {
+        display: table-cell !important;
     }
-    /* living ===================================== */
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        .living {
-            margin-top: 80px;
-            margin-bottom: 30px;
-        }
+    .d-xl-flex {
+        display: -ms-flexbox !important;
+        display: flex !important;
     }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        .living {
-            margin-top: 5px;
-            margin-bottom: 30px;
-        }
+    .d-xl-inline-flex {
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
     }
-    
-    .livingprod {
-        margin-bottom: 30px
+}
+
+
+/* hr原本就是區塊層級可直接+margin auto */
+
+hr {
+    margin: 5px auto;
+}
+
+
+/* header ===================================== */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #E8E0D4;
+}
+
+header.fixed {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    animation: headerAni 0.8s;
+}
+
+@keyframes headerAni {
+    0% {
+        transform: translateY(-150px);
     }
-    
-    .livingprod a {
-        color: #333333;
-        cursor: pointer;
+    100% {
+        transform: translateY(0px);
     }
-    
-    .livingprod .prodImgBox {
-        /* 1-滑到livingprod圖片變淡 */
-        transition: all 500ms;
-        opacity: 1;
-        /* 1-滑到livingprod圖片變淡 */
-        width: 100%;
-        height: auto;
-        overflow: hidden
+}
+
+
+/* 導覽列 */
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    /* 先將logo改為區塊層級再+margin auto置中 */
+    header .logo {
+        display: block;
+        margin: 10px auto;
+        margin-top: 25px;
+        width: 60px;
+        max-width: 30%;
     }
-    /* 1-滑到livingprod圖片變淡 */
-    
-    .livingprod:hover .prodImgBox {
+    header .showMenu {
+        display: none;
+    }
+    /* Grid寫法 */
+    header nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr) 1fr repeat(5, 110px) 1fr repeat(5, 1fr);
+        width: 85%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    header nav a {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        transition: opacity 0.3s ease;
+    }
+    header nav a:hover {
         opacity: 0.4;
     }
-    /* 2-滑到livingprod圖片放大 */
-    
-    .livingprod .prodImgBox img {
-        transition: all 500ms;
-        display: block;
+    header nav a:nth-child(1) {
+        grid-column-start: 7;
     }
-    /* 2-滑到livingprod圖片放大 */
-    
-    .livingprod:hover .prodImgBox img {
-        transform: scale(1.1)
+    header nav a:nth-child(6) {
+        grid-column-start: 15;
     }
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        .livingprod .prodConBox {
-            /* 3-滑到livingprod文字顯示 */
-            opacity: 0;
-            transition: all 400ms;
-            /* 3-滑到livingprod文字顯示 */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-        }
+    header nav a:nth-child(6),
+    header nav a:nth-child(7),
+    header nav a:nth-child(8) {
+        margin-left: auto;
+        width: 45px;
+        height: 45px;
     }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        .livingprod .prodConBox {
-            opacity: 1;
-            position: relative;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            width: 100%;
-            background-color: #C9BAAB
-        }
+    header nav a:nth-child(6)::before,
+    header nav a:nth-child(7)::before,
+    header nav a:nth-child(8)::before {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/icon/icon.svg);
+        background-size: auto 100%;
+        align-self: center;
     }
-    /* 3-滑到livingprod文字顯示 */
-    
-    .livingprod:hover .prodConBox {
-        opacity: 1;
-        display: block;
+    header nav a:nth-child(6)::before {
+        background-position: 0 0;
     }
-    
-    .prodConTit {
-        width: 100%;
-        text-align: center;
+    header nav a:nth-child(7)::before {
+        background-position: -25px 0;
     }
-    
-    .prodConPri {
-        text-align: center;
+    header nav a:nth-child(8)::before {
+        background-position: -50px 0;
     }
-    /* livingprod ===================================== */
-    
-    .prodDtlTit {
-        line-height: 42px;
-    }
-    
-    .prodDtlPri {
-        line-height: 42px;
-    }
-    
-    .showBox {
-        padding: 15px;
-        background-color: #D8CDC3;
-    }
-    
-    .bigPhoto img {
-        width: 100%;
-    }
-    
-    .desSmall img {
-        width: 20%;
-        padding-top: 5px;
-        padding-right: 5px;
-        cursor: pointer;
-    }
-    /* 麵包屑 */
-    
-    ul.breadcrumb {
-        padding-top: 15px;
-    }
-    
-    ul.breadcrumb li {
-        display: inline;
-        font-size: 1rem;
-    }
-    
-    ul.breadcrumb li a {
-        color: #333333;
-    }
-    
-    ul.breadcrumb li+li::before {
-        padding: 8px;
-        /* \00a0代表空格，所以等於/加上空格 */
-        content: "/\00a0";
-    }
-    
-    ul.breadcrumb li a:hover {
-        text-decoration: underline;
-    }
-    /* 選項卡 */
-    
-    .tab {
-        overflow: hidden;
-    }
-    
-    .tab button {
-        font-family: "Belleza", sans-serif;
-        background-color: inherit;
-        float: left;
-        border: none;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        outline: none;
-        cursor: pointer;
-        padding: 11px 15px 8px;
-        transition: 0.3s;
-        font-size: 0.95rem;
-        letter-spacing: 0.05rem;
-    }
-    
-    .tab button:hover {
-        background-color: #D8CDC3;
-    }
-    
-    .tab button.active {
-        background-color: #C9BAAB;
-    }
-    
-    .tabcontent {
-        display: none;
-        padding: 20px;
-        border: 1px solid #C9BAAB;
-    }
-    /* 加入購物車 */
-    
-    input:focus,
-    select:focus {
-        outline: none;
-    }
-    
-    .quantity {
-        font-family: "Belleza", sans-serif;
-        width: 35px;
-        height: 35px;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px #C9BAAB solid;
-        background-color: rgb(255, 255, 255, 0.3);
-        font-size: 1rem;
-    }
-    
-    .quantity::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
-    
-    .addToCart {
-        width: 35%;
-        height: 35px;
-        margin: 10px;
-        color: #f7f2f0;
-        background-color: #a1978d;
-        border: none;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 300ms;
-    }
-    
-    .addToCart:hover {
-        opacity: 0.6;
-    }
-    /* cart ===================================== */
-    /* 進度條 */
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        .progressbar {
-            text-align: center;
-            margin: 10px 0px 50px 0px;
-        }
-    }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        .progressbar {
-            text-align: center;
-            margin: 30px 0px 0px 0px;
-        }
-    }
-    /* 文字 */
-    
-    .progressbar li {
-        color: #767676;
-        font-size: 0.85rem;
-        width: 33%;
-        float: left;
-        position: relative;
-        line-height: 30px;
-    }
-    /* 其他階段 */
-    
-    .progressbar li:before {
-        content: 'o';
-        counter-increment: step;
-        width: 15px;
-        line-height: 15px;
-        display: block;
-        color: #D8CDC3;
-        background: #D8CDC3;
-        border-radius: 100%;
-        margin: auto;
-    }
-    /* 線段 */
-    
-    .progressbar li:after {
-        content: '';
-        width: 100%;
-        height: 2px;
-        background: #D8CDC3;
+    header nav a .transTw {
+        opacity: 0;
         position: absolute;
-        left: -50%;
-        top: 7px;
-        z-index: -1;
-    }
-    
-    .progressbar li:first-child:after {
-        content: none;
-    }
-    /* 當下階段 */
-    
-    .progressbar li.active:before,
-    #progressbar li.active:after {
-        background: #a1978d;
-        color: #a1978d;
-    }
-    /* 桌機 */
-    
-    @media(min-width: 1025px) {
-        .cart {
-            margin: 200px 0px 50px 0px;
-        }
-        .tableCart {
-            border-spacing: 0;
-            width: 100%;
-        }
-        .tableCart thead th {
-            background-color: #D8CDC3;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #767676;
-            padding: 10px 4px;
-            font-weight: normal;
-        }
-        .tableCart tbody td:first-child {
-            text-align: left;
-        }
-        .tableCart tbody td {
-            text-align: center;
-        }
-        .tableCart tbody span {
-            display: none;
-        }
-        .tableCart tbody .info {
-            display: flex;
-            align-items: center;
-        }
-        .tableCart tbody .info a {
-            text-decoration: none;
-            cursor: pointer;
-            color: #333333;
-        }
-        .tableCart tbody .info a:hover {
-            text-decoration: underline;
-        }
-        .tableCart tbody .infoImg {
-            width: 150px;
-            height: 150px;
-            margin: 10px 0px;
-            background-position: center center;
-            background-size: cover;
-        }
-        .tableCart tbody .infoName {
-            width: 250px;
-            height: 100%;
-            padding-left: 10px;
-            line-height: 22px;
-        }
-        .tableCart tbody select {
-            height: 30px;
-            padding: 0px 6px;
-            border: 1px solid #767676;
-            background-color: #E8E0D4;
-            color: #767676;
-        }
-        .tableCart tbody .infoDel::before {
-            content: "";
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            background-image: url(../images/icon/icon.svg);
-            background-size: auto 100%;
-            background-position: -100px 0;
-            align-self: center;
-            transform: scale(0.8);
-            cursor: pointer;
-        }
-    }
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        .cart {
-            margin: 100px 0px 60px 0px;
-        }
-        .tableCart thead tr:first-child {
-            display: none;
-        }
-        .tableCart tbody tr {
-            display: block;
-            border-bottom: 1px #a1978d solid;
-            padding: 15px 0px 5px 0px;
-        }
-        .tableCart tbody td {
-            display: inline-block;
-        }
-        .tableCart tbody td:first-child {
-            width: 100%;
-        }
-        .tableCart tbody td:nth-last-child(-n+4) {
-            /* -n+4表示選取倒數4個元素 */
-            width: 23.5%;
-            line-height: 25px;
-            text-align: center;
-            vertical-align: top;
-            padding: 10px 0px 10px 0px;
-        }
-        .tableCart tbody td span {
-            font-size: 0.8rem;
-        }
-        .tableCart tbody .info {
-            display: flex;
-            align-items: center;
-        }
-        .tableCart tbody .info a {
-            text-decoration: none;
-            cursor: pointer;
-            color: #333333;
-        }
-        .tableCart tbody .infoImg {
-            width: 90px;
-            height: 90px;
-            margin: 10px;
-            background-position: center center;
-            background-size: cover;
-        }
-        .tableCart tbody .infoName {
-            padding-left: 10px;
-            line-height: 22px;
-        }
-        .tableCart tbody select {
-            padding: 0px 4px;
-            border: none;
-            background-color: #f7f2f0;
-            color: #767676;
-        }
-        .tableCart tbody .infoDel::before {
-            content: "";
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            background-image: url(../images/icon/icon.svg);
-            background-size: auto 100%;
-            background-position: -100px 0;
-            align-self: center;
-            transform: scale(0.7);
-            cursor: pointer;
-        }
-    }
-    
-    .cartBill {
-        border: #D8CDC3 1px solid;
-        padding: 15px;
-        font-size: 1rem;
-    }
-    
-    .cartSummary {
-        color: #767676;
-        background-color: #D8CDC3;
-        text-align: center;
-        padding: 10px 4px;
-        font-weight: normal;
         font-size: 0.9rem;
     }
-    
-    .cartList,
-    .cartPrice,
-    .cartTotal {
-        display: flex;
-        justify-content: space-between;
+    header nav a:hover .transTw {
+        opacity: 1;
+        line-height: 47px;
+        transition: opacity 0.3s ease;
     }
-    
-    .cartPrice {
-        padding-bottom: 10px;
+    header nav a .transEn {
+        opacity: 1;
+        line-height: 45px;
+        transition: opacity 0.3s ease;
     }
-    
-    .cartTotal {
-        padding: 10px 0px 15px 0px;
+    header nav a:hover .transEn {
+        opacity: 0;
+        position: absolute;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    header .logo {
+        width: 60px;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 15px auto;
+        z-index: 9999;
+    }
+    header .showMenu {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        z-index: 9999;
+    }
+    header nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 150vh;
+        padding: 120px 0;
+        background-color: #f7f2f0;
+        background-size: cover;
+        z-index: 9998;
+    }
+    header nav a {
+        display: block;
+        background-color: rgb(118, 118, 118, 0.1);
+        width: 65%;
+        height: auto;
+        padding: 12px;
+        margin: 10px auto;
+        text-align: center;
+    }
+    header nav a:nth-child(6),
+    header nav a:nth-child(7),
+    header nav a:nth-child(8) {
+        display: none;
+    }
+    header nav a .transEn {
         font-size: 1.1rem;
-        font-weight: 700;
     }
-    
-    .cartBtn {
+    header nav a .transTw {
+        display: none;
+    }
+    .hamburger .line {
+        width: 20px;
+        height: 2px;
+        background-color: #767676;
+        display: block;
+        margin: 5px auto;
+        transition: all 300ms;
+    }
+    #hamburger-1.is-active .line:nth-child(2) {
+        opacity: 0;
+    }
+    #hamburger-1.is-active .line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    #hamburger-1.is-active .line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+
+/* 底部項目 ===================================== */
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    .btmBox {
+        display: none;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .btmBox {
+        display: flex;
+        position: fixed;
+        background-color: #D8CDC3;
+        bottom: 0;
+        z-index: 9999;
+        width: 100%;
+        justify-content: center
+    }
+    .btmBox .item {
+        margin: 15px 28px;
+    }
+    .btmBox .item:nth-child(1),
+    .btmBox .item:nth-child(2),
+    .btmBox .item:nth-child(3),
+    .btmBox .item:nth-child(4) {
+        padding: 10px;
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/icon/icon.svg);
+        background-size: auto 100%;
+        align-self: center;
+        transform: scale(1.2)
+    }
+    .btmBox .search {
+        background-position: 0 0;
+    }
+    .btmBox .login {
+        background-position: -25px 0;
+    }
+    .btmBox .cart {
+        background-position: -50px 0;
+    }
+    .btmBox .gotop {
+        background-position: -75px 0;
+    }
+}
+
+
+/* footer ===================================== */
+
+footer {
+    background-color: #C9BAAB;
+    /* footer若需貼底部須新增以下 */
+    margin-top: auto;
+}
+
+footer div {
+    margin-bottom: 15px;
+}
+
+footer h6 {
+    line-height: 30px;
+}
+
+
+/* index ===================================== */
+
+body section {
+    min-height: 100%;
+}
+
+.title {
+    line-height: 40px;
+    text-align: center;
+}
+
+
+/* 商品輪播圖 */
+
+.prev {
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    color: #767676;
+    cursor: pointer;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    color: #767676;
+    cursor: pointer;
+}
+
+.slick-slide {
+    outline: none
+}
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    .sliderTitle {
+        position: relative;
+    }
+    /* Absolute + translate置中 */
+    .sliderTitle>.title {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        color: #E8E0D4;
+        transform: translate(-50%, -50%);
+    }
+    .sliderTitle>.content {
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        color: #E8E0D4;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .sliderTitle {
+        position: relative;
+        margin-top: 90px;
+    }
+    .sliderTitle>.title {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #E8E0D4;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .sliderTitle>.content {
+        width: 100%;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        color: #E8E0D4;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .slidePd {
+        padding-top: 40px!important;
+    }
+}
+
+
+/* 商品輪播圖按鈕 */
+
+.sliderImg {
+    padding: 10px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.sliderImg a:focus {
+    outline: none;
+}
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    /* 按鈕樣式 */
+    .sliderTitle .btnSet {
         line-height: 50px;
         height: 50px;
         text-align: center;
-        width: 100%;
+        width: 140px;
         cursor: pointer;
-        border-radius: 8px;
-        color: #f7f2f0;
-        background-color: #a1978d;
-        transition: all 300ms;
-        margin: 10px 0px;
+        transition: all 5s;
+        border-radius: 10px;
+        position: relative;
+        color: #333333;
+        background-color: #E8E0D4;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    
-    .cartBtn:hover {
-        opacity: 0.6;
+    /* 按鈕內文字樣式 */
+    .sliderTitle .btnSet span {
+        display: block;
+        position: absolute;
+        width: 140px;
+        height: 100%;
+        transition: all 0.7s;
+        font-size: 1.2rem;
     }
-    /* checkout ===================================== */
-    /* 手機 */
-    
-    @media(max-width: 1024px) {
-        .checkSummary:nth-child(1) {
-            margin-top: 20px;
-        }
-        .checkBill .mgTop {
-            margin: 10px 5px 0px 5px;
-        }
+    .sliderTitle .btnSet span:hover {
+        color: #E8E0D4;
     }
-    
-    .checkSummary {
-        color: #767676;
+    /* 按鈕滑過開始 */
+    .sliderTitle .btnSet::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        opacity: 0;
+        border-radius: 10px;
+        background-color: #767676;
+        transition: all 0.4s;
+    }
+    /* 按鈕滑過結束 */
+    .sliderTitle .btnSet:hover::before {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    /* 按鈕樣式 */
+    .sliderTitle .btnSet {
+        line-height: 30px;
+        height: 30px;
+        text-align: center;
+        width: 90px;
+        cursor: pointer;
+        transition: all 5s;
+        border-radius: 6px;
+        position: relative;
+        color: #333333;
+        background-color: #E8E0D4;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /* 按鈕內文字樣式 */
+    .sliderTitle .btnSet span {
+        display: block;
+        position: absolute;
+        width: 90px;
+        height: 100%;
+        transition: all 0.7s;
+    }
+}
+
+
+/* living ===================================== */
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    .living {
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .living {
+        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+}
+
+.livingprod {
+    margin-bottom: 30px
+}
+
+.livingprod .prodImgBox {
+    /* 1-滑到livingprod圖片變淡 */
+    transition: all 500ms;
+    opacity: 1;
+    /* 1-滑到livingprod圖片變淡 */
+    width: 100%;
+    height: auto;
+    overflow: hidden
+}
+
+
+/* 1-滑到livingprod圖片變淡 */
+
+.livingprod:hover .prodImgBox {
+    opacity: 0.4;
+}
+
+
+/* 2-滑到livingprod圖片放大 */
+
+.livingprod .prodImgBox img {
+    transition: all 500ms;
+    display: block;
+}
+
+
+/* 2-滑到livingprod圖片放大 */
+
+.livingprod:hover .prodImgBox img {
+    transform: scale(1.1)
+}
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    .livingprod .prodConBox {
+        /* 3-滑到livingprod文字顯示 */
+        opacity: 0;
+        transition: all 400ms;
+        /* 3-滑到livingprod文字顯示 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .livingprod .prodConBox {
+        opacity: 1;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        background-color: #C9BAAB
+    }
+}
+
+
+/* 3-滑到livingprod文字顯示 */
+
+.livingprod:hover .prodConBox {
+    opacity: 1;
+    display: block;
+}
+
+.prodConTit {
+    width: 100%;
+    text-align: center;
+}
+
+.prodConPri {
+    text-align: center;
+}
+
+
+/* livingprod ===================================== */
+
+.prodDtlTit {
+    line-height: 42px;
+}
+
+.prodDtlPri {
+    line-height: 42px;
+}
+
+.showBox {
+    padding: 15px;
+    background-color: #D8CDC3;
+}
+
+.bigPhoto img {
+    width: 100%;
+}
+
+.desSmall img {
+    width: 20%;
+    padding-top: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+
+/* 麵包屑 */
+
+ul.breadcrumb {
+    padding-top: 15px;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 1rem;
+}
+
+ul.breadcrumb li+li::before {
+    padding: 8px;
+    /* \00a0代表空格，所以等於/加上空格 */
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+
+/* 選項卡 */
+
+.tab {
+    overflow: hidden;
+}
+
+.tab button {
+    font-family: "Belleza", sans-serif;
+    background-color: inherit;
+    float: left;
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 11px 15px 8px;
+    transition: 0.3s;
+    font-size: 0.95rem;
+    letter-spacing: 0.05rem;
+}
+
+.tab button:hover {
+    background-color: #D8CDC3;
+}
+
+.tab button.active {
+    background-color: #C9BAAB;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #C9BAAB;
+}
+
+
+/* 加入購物車 */
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+.quantity {
+    font-family: "Belleza", sans-serif;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px #C9BAAB solid;
+    background-color: rgb(255, 255, 255, 0.3);
+    font-size: 1rem;
+}
+
+.quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.addToCart {
+    width: 35%;
+    height: 35px;
+    margin: 10px;
+    color: #f7f2f0;
+    background-color: #a1978d;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.addToCart:hover {
+    opacity: 0.6;
+}
+
+
+/* cart ===================================== */
+
+
+/* 進度條 */
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    .progressbar {
+        text-align: center;
+        margin: 10px 0px 50px 0px;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .progressbar {
+        text-align: center;
+        margin: 30px 0px 0px 0px;
+    }
+}
+
+
+/* 文字 */
+
+.progressbar li {
+    color: #767676;
+    font-size: 0.85rem;
+    width: 33%;
+    float: left;
+    position: relative;
+    line-height: 30px;
+}
+
+
+/* 其他階段 */
+
+.progressbar li:before {
+    content: 'o';
+    counter-increment: step;
+    width: 15px;
+    line-height: 15px;
+    display: block;
+    color: #D8CDC3;
+    background: #D8CDC3;
+    border-radius: 100%;
+    margin: auto;
+}
+
+
+/* 線段 */
+
+.progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #D8CDC3;
+    position: absolute;
+    left: -50%;
+    top: 7px;
+    z-index: -1;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+
+/* 當下階段 */
+
+.progressbar li.active:before,
+.progressbar li.active:after {
+    background: #a1978d;
+    color: #a1978d;
+}
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    .cart {
+        margin: 200px 0px 50px 0px;
+    }
+    .tableCart {
+        border-spacing: 0;
+        width: 100%;
+    }
+    .tableCart thead th {
         background-color: #D8CDC3;
         text-align: center;
+        font-size: 0.9rem;
+        color: #767676;
         padding: 10px 4px;
         font-weight: normal;
-        font-size: 0.9rem;
     }
-    
-    .checkBill {
-        border: #D8CDC3 1px solid;
-        padding: 15px;
-        font-size: 1rem;
+    .tableCart tbody td:first-child {
+        text-align: left;
     }
-    
-    .checkBill li {
-        margin: 10px;
-        padding-left: 5rem;
+    .tableCart tbody td {
+        text-align: center;
     }
-    
-    .checkBill .title {
-        font-size: 0.9rem;
-        margin-left: -5rem;
-        float: left;
-        line-height: 30px;
+    .tableCart tbody span {
+        display: none;
     }
-    
-    .checkBill select {
-        height: 30px;
-        padding: 0px 6px;
-        margin: 0px 5px;
-        color: #767676;
-        background-color: rgb(255, 255, 255, 0.3);
-        border: 1px #C9BAAB solid;
-    }
-    
-    .checkout {
+    .tableCart tbody .info {
         display: flex;
         align-items: center;
     }
-    
-    .checkInfo {
-        margin-left: 20px;
+    .tableCart tbody .info a:hover {
+        text-decoration: underline;
     }
-    
-    .checkInfo p {
-        font-size: 0.9rem;
-    }
-    
-    .checkImg {
-        width: 100px;
-        height: 100px;
-        margin: 5px 0px 5px 0px;
+    .tableCart tbody .infoImg {
+        width: 150px;
+        height: 150px;
+        margin: 10px 0px;
         background-position: center center;
         background-size: cover;
     }
-    
-    .checkList,
-    .checkPrice,
-    .checkTotal {
-        display: flex;
-        justify-content: space-between;
+    .tableCart tbody .infoName {
+        width: 250px;
+        height: 100%;
+        padding-left: 10px;
+        line-height: 22px;
     }
-    
-    .checkList {
-        padding-top: 10px;
-    }
-    
-    .checkPrice {
-        padding-bottom: 10px;
-    }
-    
-    .checkTotal {
-        padding: 10px 0px 10px 0px;
-        font-size: 1.1rem;
-        font-weight: 700;
-    }
-    
-    .checkBuyer {
+    .tableCart tbody select {
+        height: 30px;
+        padding: 0px 6px;
+        border: 1px solid #767676;
+        background-color: #E8E0D4;
         color: #767676;
-        background-color: #D8CDC3;
-        text-align: center;
-        padding: 10px 4px;
-        font-weight: normal;
-        font-size: 0.9rem;
     }
-    
-    .checkText {
+    .tableCart tbody .infoDel::before {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/icon/icon.svg);
+        background-size: auto 100%;
+        background-position: -100px 0;
+        align-self: center;
+        transform: scale(0.8);
+        cursor: pointer;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .cart {
+        margin: 100px 0px 60px 0px;
+    }
+    .tableCart thead tr:first-child {
+        display: none;
+    }
+    .tableCart tbody tr {
+        display: block;
+        border-bottom: 1px #a1978d solid;
+        padding: 15px 0px 5px 0px;
+    }
+    .tableCart tbody td {
+        display: inline-block;
+    }
+    .tableCart tbody td:first-child {
+        width: 100%;
+    }
+    .tableCart tbody td:nth-last-child(-n+4) {
+        /* -n+4表示選取倒數4個元素 */
+        width: 23.5%;
+        line-height: 25px;
+        text-align: center;
+        vertical-align: top;
+        padding: 10px 0px 10px 0px;
+    }
+    .tableCart tbody td span {
+        font-size: 0.8rem;
+    }
+    .tableCart tbody .info {
+        display: flex;
+        align-items: center;
+    }
+    .tableCart tbody .infoImg {
+        width: 90px;
+        height: 90px;
+        margin: 10px;
+        background-position: center center;
+        background-size: cover;
+    }
+    .tableCart tbody .infoName {
+        padding-left: 10px;
+        line-height: 22px;
+    }
+    .tableCart tbody select {
+        padding: 0px 4px;
+        border: none;
+        background-color: #f7f2f0;
+        color: #767676;
+    }
+    .tableCart tbody .infoDel::before {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/icon/icon.svg);
+        background-size: auto 100%;
+        background-position: -100px 0;
+        align-self: center;
+        transform: scale(0.7);
+        cursor: pointer;
+    }
+}
+
+.cartBill {
+    border: #D8CDC3 1px solid;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.cartSummary {
+    color: #767676;
+    background-color: #D8CDC3;
+    text-align: center;
+    padding: 10px 4px;
+    font-size: .9rem;
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .cartSummary {
+        margin-top: 30px;
+    }
+}
+
+.cartList,
+.cartPrice,
+.cartTotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartPrice {
+    padding-bottom: 10px;
+}
+
+.cartTotal {
+    padding: 10px 0px 15px 0px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.cartBtn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #f7f2f0;
+    background-color: #a1978d;
+    transition: all 300ms;
+    margin: 10px 0px;
+}
+
+.cartBtn:hover {
+    opacity: 0.6;
+}
+
+
+/* checkout ===================================== */
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .checkSummary:nth-child(1) {
+        margin-top: 20px;
+    }
+    .checkBill .mgTop {
+        margin: 10px 5px 0px 5px;
+    }
+}
+
+.checkSummary {
+    color: #767676;
+    background-color: #D8CDC3;
+    text-align: center;
+    padding: 10px 4px;
+    font-size: 0.9rem;
+}
+
+.checkBill {
+    border: #D8CDC3 1px solid;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.checkBill li {
+    margin: 10px;
+    padding-left: 5rem;
+}
+
+.checkBill .title {
+    font-size: 0.9rem;
+    margin-left: -5rem;
+    float: left;
+    line-height: 30px;
+}
+
+.checkBill select {
+    height: 30px;
+    padding: 0px 6px;
+    margin: 0px 5px;
+    color: #767676;
+    background-color: rgb(255, 255, 255, 0.3);
+    border: 1px #C9BAAB solid;
+}
+
+.checkout {
+    display: flex;
+    align-items: center;
+}
+
+.checkInfo {
+    margin-left: 20px;
+}
+
+.checkInfo p {
+    font-size: 0.9rem;
+}
+
+.checkImg {
+    width: 100px;
+    height: 100px;
+    margin: 5px 0px 5px 0px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.checkList,
+.checkPrice,
+.checkTotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkList {
+    padding-top: 10px;
+}
+
+.checkPrice {
+    padding-bottom: 10px;
+}
+
+.checkTotal {
+    padding: 10px 0px 10px 0px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.checkBuyer {
+    color: #767676;
+    background-color: #D8CDC3;
+    text-align: center;
+    padding: 10px 4px;
+    font-size: 0.9rem;
+}
+
+.checkText {
+    font-family: "Belleza", sans-serif;
+    width: 230px;
+    height: 30px;
+    vertical-align: middle;
+    padding: 10px;
+    margin: 0px 5px;
+    background-color: rgb(255, 255, 255, 0.3);
+    border: 1px #C9BAAB solid;
+    font-size: 0.85rem;
+}
+
+.checkPrev {
+    float: left;
+    width: 50%;
+    color: #767676;
+    background-color: #D8CDC3;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 0.9rem;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.checkPrev:hover {
+    opacity: 0.6;
+}
+
+.checkNext {
+    float: right;
+    width: 50%;
+    color: #f7f2f0;
+    background-color: #a1978d;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 0.9rem;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.checkNext:hover {
+    opacity: 0.6;
+}
+
+
+/* final ===================================== */
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    .final {
+        margin: 210px 0px 50px 0px;
+        text-align: center;
+        line-height: 34px;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .final {
+        margin: 140px 0px 50px 0px;
+        text-align: center;
+        line-height: 34px;
+    }
+}
+
+.final h3 {
+    padding-bottom: 30px;
+}
+
+.backHome {
+    width: 25%;
+    height: 35px;
+    margin: 40px 0px 20px 0px;
+    color: #f7f2f0;
+    background-color: #a1978d;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.backHome:hover {
+    opacity: 0.6;
+}
+
+
+/* login ===================================== */
+
+
+/* 桌機 */
+
+@media(min-width: 1025px) {
+    .login {
+        display: flex;
+    }
+    .loginImg {
+        width: 40%;
+        min-height: 100vh;
+        background-image: url(../images/login.jpg);
+        background-size: cover;
+    }
+    .loginInfo {
+        width: 55%;
+        margin: 60px auto;
+    }
+    .loginLogo {
+        text-align: center;
+    }
+    .loginLogo img {
+        display: inline-block;
+        margin: 20px auto;
+        width: 60px;
+    }
+    .loginView {
+        display: flex;
+        margin-top: 30px;
+    }
+    .loginView ul li {
+        width: 100%;
+        margin: 25px 0px;
+    }
+    .loginText {
         font-family: "Belleza", sans-serif;
-        width: 230px;
+        width: 90%;
         height: 30px;
         vertical-align: middle;
-        padding: 10px;
-        margin: 0px 5px;
+        padding: 15px;
         background-color: rgb(255, 255, 255, 0.3);
         border: 1px #C9BAAB solid;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
-    
-    .checkPrev {
-        float: left;
-        width: 50%;
+    .loginBtn {
+        color: #767676;
+        background-color: #D8CDC3;
+        text-align: center;
+        padding: 8px 0px;
+        font-size: 1rem;
+        transition: all 300ms;
+        cursor: pointer;
+    }
+    .loginBtn:hover {
+        opacity: 0.6;
+    }
+    .signin,
+    .register {
+        width: 100%;
+    }
+    .signin {
+        border-right: 1px #C9BAAB solid;
+    }
+    .signin .loginBtn {
+        margin-right: 10%;
+    }
+    .register li {
+        text-align: right;
+    }
+    .register h5 {
+        padding-left: 40px;
+    }
+    .register .loginBtn {
+        margin-left: 10%;
+    }
+    .returnStore {
+        font-size: 0.85rem;
+        margin-top: 40px;
+        text-align: right;
+        color: #767676;
+    }
+    .returnStore:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/* 手機 */
+
+@media(max-width: 1024px) {
+    .loginInfo {
+        width: 85%;
+        margin: 30px auto;
+    }
+    .loginInfo img {
+        display: block;
+        margin: 20px auto;
+        width: 60px;
+        max-width: 30%;
+    }
+    .loginView {
+        margin-top: 20px;
+    }
+    .loginView ul li {
+        width: 100%;
+        margin: 15px 0px;
+    }
+    .loginText {
+        font-family: "Belleza", sans-serif;
+        width: 100%;
+        height: 30px;
+        vertical-align: middle;
+        padding: 18px;
+        background-color: rgb(255, 255, 255, 0.3);
+        border: 1px #C9BAAB solid;
+        font-size: 1rem;
+    }
+    .loginBtn {
         color: #767676;
         background-color: #D8CDC3;
         text-align: center;
         padding: 10px 0px;
-        font-weight: normal;
-        font-size: 0.9rem;
-        transition: all 300ms;
-        cursor: pointer;
+        font-size: 1rem;
     }
-    
-    .checkPrev:hover {
-        opacity: 0.6;
+    .register {
+        margin-top: 30px;
     }
-    
-    .checkNext {
-        float: right;
-        width: 50%;
-        color: #f7f2f0;
-        background-color: #a1978d;
+    .returnStore {
+        font-size: 0.95rem;
+        margin-top: 25px;
         text-align: center;
-        padding: 10px 0px;
-        font-weight: normal;
-        font-size: 0.9rem;
-        transition: all 300ms;
-        cursor: pointer;
+        color: #767676;
     }
-    
-    .checkNext:hover {
-        opacity: 0.6;
-    }
+}
