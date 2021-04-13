@@ -2115,7 +2115,7 @@ select:focus {
 @media(min-width: 1025px) {
     .progressbar {
         text-align: center;
-        margin: 10px 0px 50px 0px;
+        margin: 5px 0px 25px 0px;
     }
 }
 
@@ -2188,7 +2188,7 @@ select:focus {
 
 @media(min-width: 1025px) {
     .cart {
-        margin: 200px 0px 50px 0px;
+        margin: 190px 0px 50px 0px;
     }
     .tableCart {
         border-spacing: 0;
@@ -2383,7 +2383,8 @@ select:focus {
 /* 手機 */
 
 @media(max-width: 1024px) {
-    .checkSummary:nth-child(1) {
+    .checkSummary:nth-child(1),
+    .checkBuyer:nth-child(1) {
         margin-top: 20px;
     }
     .checkBill .mgTop {
