@@ -1577,11 +1577,12 @@ header.fixed {
     }
     header nav a {
         display: block;
-        background-color: rgb(118, 118, 118, 0.1);
+        background-color: #E8E0D4;
+        color: #767676;
         width: 65%;
         height: auto;
         padding: 12px;
-        margin: 10px auto;
+        margin: 20px auto;
         text-align: center;
     }
     header nav a:nth-child(6),
